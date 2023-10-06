@@ -2,9 +2,10 @@
 
 ### Repositório para armazenar práticas do programa Despertar Dev da Growdev.
 
+<a href="https://rodrigoalveselly.github.io/praticas">**💻 ACESSE A PAGINA**</a>
 <br>
 
-## Prática 1
+##  📝 Prática 1
 
 * Exercicio 1 - Orientação do contéudo dentro da celula
 * Exercicio 2 - Manipulação do tamanho de uma td dentro de um tr com colspan
@@ -12,13 +13,13 @@
 
 <br>
 
-## Pratíca 2
+##  📝 Pratíca 2
 
 * Exercicio 1 - Criação de layout web apenas com tabelas
 
 <br>
 
-## Pratica 3
+##  📝 Pratica 3
 
 * Exercicio 1 - Prática colspan
 * Exercicio 2 - Prática rowspan
