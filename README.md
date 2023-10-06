@@ -25,3 +25,15 @@
 * Exercicio 1 - Prática colspan
 * Exercicio 2 - Prática rowspan
 * Exercicio 3 - Prática colspan e rowspan
+
+<br>
+
+##  📝 Pratica 4
+
+* HTML BÁSICO - Introdução ao HTML, história e semantica.
+
+<br>
+
+##  📝 Pratica 5
+
+* HTML NA PRÁTICA - Elaboração de site básico com HTML e pouco CSS.
