@@ -5,113 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratica 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<style>
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-
-    table td {
-        padding: 2vh;
-        width: 20vh;
-    }
-
-    .table1, .table2, .table2 {
-        margin-bottom: 5vh;
-    }
-    
-    .nav-menu {
-        margin-top: 2vh;
-    }
-
-    .nav-menu ul li {
-        display: inline;
-        list-style: none;
-        
-    }
-
-    .nav-menu ul li a {
-        text-decoration: none;
-        color: black;
-        padding: 2vh;
-    }
-
-</style>
-
 <body>
-
-<main>
-    <table class="table1">
-        <tr>
-            <td style="text-align: start;">1</td>
-            <td style="text-align: start;">2</td>
-            <td style="text-align: start;">3</td>
-        </tr>
-        <tr>
-            <td style="text-align: center;">4</td>
-            <td style="text-align: center;">5</td>
-            <td style="text-align: center;">6</td>
-        </tr>
-        <tr>
-            <td style="text-align:end;">7</td>
-            <td style="text-align:end;">8</td>
-            <td style="text-align:end;">9</td>
-        </tr>
-    </table>
-
-    <table class="table2">
-        <tr>
-            <td style="text-align: start;">1</td>
-            <td style="text-align: start;">2</td>
-            <td style="text-align: start;">3</td>
-        </tr>
-        <tr>
-            <td style="text-align: center;" colspan="3">4</td>
-        </tr>
-        <tr>
-            <td style="text-align:start;">7</td>
-            <td style="text-align:start;">8</td>
-            <td style="text-align:start;">9</td>
-        </tr>
-    </table>
-
-    <table class="table3">
-        <tr>
-            <td style="text-align: start;">1</td>
-            <td style="text-align: start;">2</td>
-            <td style="text-align: center;" rowspan="3">3</td>
-        </tr>
-        <tr>
-            <td style="text-align: center;" colspan="2">4</td>
-        </tr>
-        <tr>
-            <td style="text-align:start;">7</td>
-            <td style="text-align:start;">8</td>
-        </tr>
-    </table>
-
     <nav class="nav-menu">
         <ul>
-            <li><a href="pratica-1.html" class="item-menu">Pratica 1</a></li>
-            <li><a href="pratica-2.html" class="item-menu">Pratica 2</a></li>
-            <li><a href="pratica-3.html" class="item-menu">Pratica 3</a></li>
-            <li><a href="index.html" class="item-menu">Voltar para Menu</a></li>
+            <li><a href="index.html" class="item-menu">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" class="item-menu">Praticas</a>
+                <div class="dropdown-content">
+                    <a href="pratica-1.html">Pratica 1</a>
+                    <a href="pratica-2.html">Pratica 2</a>
+                    <a href="pratica-3.html">Pratica 3</a>
+                </div>
+            </li>
         </ul>
     </nav>
 
-</main>
+    <main>
+        <h3>Prática 1</h3>
+        <div class="row">
+            <div class="card green">
+                <h4>Exercicio 1</h4>
+                <table class="table1">
+                    <tr>
+                        <td style="text-align: start;">1</td>
+                        <td style="text-align: start;">2</td>
+                        <td style="text-align: start;">3</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">4</td>
+                        <td style="text-align: center;">5</td>
+                        <td style="text-align: center;">6</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:end;">7</td>
+                        <td style="text-align:end;">8</td>
+                        <td style="text-align:end;">9</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card blue">
+                <h4>Exercicio 2</h4>
+                <table class="table2">
+                    <tr>
+                        <td style="text-align: start;">1</td>
+                        <td style="text-align: start;">2</td>
+                        <td style="text-align: start;">3</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" colspan="3">4</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:start;">7</td>
+                        <td style="text-align:start;">8</td>
+                        <td style="text-align:start;">9</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card red">
+                <h4>Exercicio 3</h4>
+                <table class="table3">
+                    <tr>
+                        <td style="text-align: start;">1</td>
+                        <td style="text-align: start;">2</td>
+                        <td style="text-align: center;" rowspan="3">3</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;" colspan="2">4</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:start;">7</td>
+                        <td style="text-align:start;">8</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
 
+
+    </main>
 
 
 </body>

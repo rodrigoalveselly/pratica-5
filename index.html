@@ -4,66 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title>Inicio - Banco de Práticas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<style>
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    table,
-    th,
-    td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-
-    table td {
-        padding: 2vh;
-        width: 20vh;
-    }
-
-    .table1, .table2, .table2 {
-        margin-bottom: 5vh;
-    }
-    
-    .nav-menu {
-        margin-top: 5vh;
-    }
-
-    .nav-menu ul li {
-        display: inline;
-        list-style: none;
-        
-    }
-
-    .nav-menu ul li a {
-        text-decoration: none;
-        color: black;
-        padding: 2vh;
-    }
-
-    .img {
-        width: 50vh;
-    }
-
-</style>
 
 <body>
 
 <main>
-    <img class="img" src="./pratica.jpg" alt="">
-    <nav class="nav-menu">
-        <ul>
-            <li><a href="pratica-1.html" class="item-menu">Pratica 1</a></li>
-            <li><a href="pratica-2.html" class="item-menu">Pratica 2</a></li>
-            <li><a href="pratica-3.html" class="item-menu">Pratica 3</a></li>
-        </ul>
-    </nav>
+    <div class="header">
+        <h3>Banco de Práticas</h3>
+    </div>
+    <div class="row">
+        <a href="pratica-1.html">
+            <div class="card green">
+                <h4>Prática 1</h4>
+                <p>Prática de orientação de tabelas</p>
+                <img src="pratica.jpg" alt="">
+            </div>
+        </a>
+        <a href="pratica-2.html">
+            <div class="card blue">
+                <h4>Prática 2</h4>
+                <p>Prática de layout web a base de tabelas</p>
+                <img src="pratica.jpg" alt="">
+            </div>
+        </a>
+        <a href="pratica-3.html">
+            <div class="card red">
+                <h4>Prática 3</h4>
+                <p>Prática orientação de tabelas</p>
+                <img src="pratica.jpg" alt="">
+            </div>
+        </a>
+
+    </div>
 
 </main>
 

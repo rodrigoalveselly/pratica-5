@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main, .nav-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu {
+    border-bottom: 1px solid #f1f1f1;
+    box-shadow: 5px 5px 10px 0px #f1f1f1
+}
+
+.nav-menu ul li {
+    display: inline;
+    list-style: none;
+    
+}
+
+.nav-menu ul {
+    padding: 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 2vh;
+}
+
+.nav-menu a:hover {
+    font-weight: 600;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 2vh 1vh;
+    z-index: 1;
+    margin-bottom: 2vh;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 1vh; /* Ajuste conforme necessário */
+}
+  
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 1vh 5vh 5vh 5vh;
+    margin: 20px;
+    width: 30vh;
+    height: 25vh;
+    transition: all 0.3s ease-out;  
+  }
+
+  .card span {
+    display: flex;
+    justify-content: center;
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+
+  .card img {
+    width: 30vh;
+  }
+ 
+
+  .card-xl{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 1vh 5vh 5vh 5vh;
+    margin: 20px;
+    width: 30vh;
+    height: 30vh;
+    transition: all 0.3s ease-out;  
+  }
+
+.card-xl span {
+    display: flex;
+    justify-content: center;
+}
+
+  .card-xl:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+
+  .blue {
+    border-left: 3px solid #4895ff;
+  }
+   
+  .green {
+    border-left: 3px solid #3bb54a;
+  }
+   
+  .red {
+    border-left: 3px solid #b3404a;
+  }
+
+
+/* Formatação de tabelas paras práticas  */
+
+th, td, tr {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table td {
+    padding: 2vh;
+    width: 20vh;
+}
+
+.table1, .table2, .table2 {
+    margin-bottom: 5vh;
+}
+
+
+.table4{
+    width: 30vh;
+}
+
+.header {
+    text-align: center;
+    height: 5vh;
+}
+
+.menu {
+    height: 5vh;
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    height: 2vh;
+}
+
+.invisivel {
+    border: 0px;
+}
+
+.table5, .table6 {
+    width: 30vh;
+}
+
+.table7 {
+    width: 5vh;
+}
+
+.table5 td, .table6 td, .table7 td{
+    padding: 2vh;
+}
