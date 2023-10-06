@@ -32,7 +32,7 @@ main, .nav-menu{
 }
 
 .nav-menu a:hover {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .dropdown {
@@ -61,7 +61,6 @@ main, .nav-menu{
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 
 .row {
@@ -188,4 +187,57 @@ table td {
 
 .table5 td, .table6 td, .table7 td{
     padding: 2vh;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+    body {
+        margin: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2vh;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin: 2vh;
+        height: 30vh;
+    }
+
+    .card-xl {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        margin: 2vh;
+        height: 35vh;
+    }
+
+    .card img {
+        width: 20vh; 
+
+    }
+
+    .row a {
+        text-decoration: none;
+        color: black;
+        width: 95%;
+        margin: 0vh;
+    }
 }
