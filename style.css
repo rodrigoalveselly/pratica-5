@@ -120,6 +120,32 @@ main, .nav-menu{
     cursor: pointer;
   }
 
+  .card-xxl{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+    padding: 1vh 1vh 1vh 1vh;
+    margin: 5px;
+    width: 100vh;
+    height: 50vh;
+    transition: all 0.3s ease-out;  
+  }
+
+.card-xxl span {
+    display: flex;
+    justify-content: center;
+}
+
+.card-xxl p {
+    font-size: 12px;
+    font-style: italic;
+}
+
+  .card-xxl:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+
+
   .blue {
     border-left: 3px solid #4895ff;
   }
