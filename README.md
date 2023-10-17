@@ -37,3 +37,35 @@
 ##  📝 Pratica 5
 
 * HTML NA PRÁTICA - Elaboração de site básico com HTML e pouco CSS.
+
+<br>
+
+##  📝 Pratica 6
+
+* HTML NA PRÁTICA - Elaboração de cronograma com tabelas.
+
+<br>
+
+##  📝 Pratica 7
+
+* CSS NA PRÁTICA - Orientação com CSS - Parte 1.
+
+<br>
+
+##  📝 Pratica 8
+
+* CSS NA PRÁTICA - Orientação com CSS - Parte 2.
+
+<br>
+
+##  📝 Pratica 9
+
+* CSS NA PRÁTICA - Orientação com CSS - Parte 3.
+
+<br>
+
+##  📝 Pratica 10
+
+* CSS NA PRÁTICA - Orientação com CSS - Parte 4.
+
+
