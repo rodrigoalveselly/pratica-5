@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f3f3f3;
+        }
+
+       
+        .box-superior  {
+            position:absolute;
+            top: 0;
+            left: 0;
+            display: inline;
+            width: 40vh;
+            height: auto;
+            margin: 5px;
+
+        }
+
+        .linha-superior {
+            position: relative;
+            float: left;
+            width: 40vh;
+            height: auto;
+        }
+        
+
+        .bloco-superior {
+            display: inline-block;
+            float: left;
+            margin: 5px;
+            width: 10vh;
+            height: 10vh;
+            background-color: #333;
+        }
+
+
+        .box-inferior {
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            display: inline;
+            width: 40vh;
+            height: auto;
+            margin: 5px;
+        }
+
+      
+        .linha-inferior {
+            position: relative;
+            float: right;
+            width: 40vh;
+            height: auto;
+        }
+
+
+        .bloco-inferior {
+            display: inline-block;
+            float: right;
+            margin: 5px;
+            width: 10vh;
+            height: 10vh;
+            background-color: #333;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box-superior">
+        <div class="linha-superior">
+            <div class="bloco-superior"></div>
+            <div class="bloco-superior"></div>
+            <div class="bloco-superior"></div>
+        </div>
+        <div class="linha-superior">
+            <div class="bloco-superior"></div>
+            <div class="bloco-superior"></div>
+        </div>
+        <div class="linha-superior">
+            <div class="bloco-superior"></div>
+        </div>
+    </div>
+    
+    <div class="box-inferior">
+        <div class="linha-inferior">
+            <div class="bloco-inferior"></div>
+        </div>
+        <div class="linha-inferior">
+            <div class="bloco-inferior"></div>
+            <div class="bloco-inferior"></div>
+        </div>
+        <div class="linha-inferior">
+            <div class="bloco-inferior"></div>
+            <div class="bloco-inferior"></div>
+            <div class="bloco-inferior"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

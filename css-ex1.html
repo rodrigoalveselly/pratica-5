@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratica 1</title>
+<style>
+    
+    * {
+        margin: 0 ;
+        padding: 0;
+    }
+
+    .box-container {
+        position: relative;
+        width: 40vh;
+        height: 40vh;
+        margin: 0 auto;
+    }
+
+    .azul {
+        position: absolute;
+        background-color: blue;
+        width: 40vh;
+        height: 40vh;
+        z-index: 1;
+    }
+
+    .vermelha {
+        position: absolute;
+        background-color: red;
+        width: 32vh;
+        height: 32vh;
+        z-index: 2;
+        top: 4vh;
+        left: 4vh;
+    }
+
+    .preta {
+        position: absolute;
+        background-color: black;
+        width: 24vh;
+        height: 24vh;
+        z-index: 3;
+        top: 8vh;
+        left: 8vh;
+    }
+
+    .verde {
+        position: absolute;
+        background-color: green;
+        width: 16vh;
+        height: 16vh;
+        z-index: 4;
+        top: 12vh;
+        left: 12vh;
+    }
+
+    .amarela {
+        position: absolute;
+        background-color: yellow;
+        width: 8vh;
+        height: 8vh;
+        z-index: 5;
+        top: 16vh;
+        left: 16vh;
+    }
+
+    
+</style>
+</head>
+
+<body>
+
+    <div class="box-container">
+        <div class="azul"></div>
+        <div class="vermelha"></div>
+        <div class="preta"></div>
+        <div class="verde"></div>
+        <div class="amarela"></div>
+    </div>
+    
+</body>
+
+</html>
