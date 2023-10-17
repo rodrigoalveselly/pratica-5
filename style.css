@@ -141,11 +141,10 @@ main, .nav-menu{
     font-style: italic;
 }
 
-  .card-xxl:hover {
+.card-xxl:hover {
     transform: translateY(-5px);
     cursor: pointer;
-  }
-
+}
 
 .blue {
     border-left: 3px solid #4895ff;
@@ -158,6 +157,7 @@ main, .nav-menu{
 .red {
     border-left: 3px solid #b3404a;
   }
+
 
 
 /* Formatação de tabelas paras práticas  */
@@ -218,7 +218,7 @@ table td {
 }
 
 
-
+/* Alterações para responsividade */
 @media only screen and (max-width: 700px) {
 
     body {
