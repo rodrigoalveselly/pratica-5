@@ -101,7 +101,7 @@ main, .nav-menu{
   }
  
 
-  .card-xl{
+.card-xl{
     border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
     padding: 1vh 5vh 5vh 5vh;
@@ -116,12 +116,12 @@ main, .nav-menu{
     justify-content: center;
 }
 
-  .card-xl:hover {
+.card-xl:hover {
     transform: translateY(-5px);
     cursor: pointer;
   }
 
-  .card-xxl{
+.card-xxl{
     border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
     padding: 1vh 1vh 1vh 1vh;
@@ -147,15 +147,15 @@ main, .nav-menu{
   }
 
 
-  .blue {
+.blue {
     border-left: 3px solid #4895ff;
   }
    
-  .green {
+.green {
     border-left: 3px solid #3bb54a;
   }
    
-  .red {
+.red {
     border-left: 3px solid #b3404a;
   }
 
