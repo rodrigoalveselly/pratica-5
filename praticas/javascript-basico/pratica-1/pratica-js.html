@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>Crie uma variável JavaScript e coloque nela o valor de sua idade.
+                        Mostre no html usando o document.write() o dado contido na
+                        variável junto da frase "Minha idade é x anos", sendo "x" o valor
+                        armazenado na sua variável.</p>
+                </div>
+                <div class="box-code blue">
+                        <p><code>
+                        const <span class="nome-variavel">idade</span> = <span class="valor-variavel">25</span><br/>
+                        <br/>
+                        document.write(`&lt;p&gt;A minha idade é ${<span class="nome-variavel">idade</span>} anos&lt;/p&gt;`)<br/>
+                        </code></p>
+
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio1()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>Crie três variáveis JavaScript, em duas delas atribua os valores que
+                        você quiser e na outra atribua o valor da soma das duas primeiras
+                        variáveis. Apresente valor da soma no documento html junto da
+                        frase "A resultado da soma de x e y é z", sendo x o valor armazenado
+                        na primeira variável, y o valor armazenado segunda variável e z o
+                        valor armazenado na terceira variável</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">x</span> = <span class="valor-variavel">33</span> <br/>
+                        const <span class="nome-variavel">y</span> = <span class="valor-variavel">15</span> <br/>
+                        <br/>
+                        const <span class="nome-variavel">z</span> = <span class="nome-variavel">x</span> + <span class="nome-variavel">y</span> <br/>
+                        document.write(`&lt;p&gt;O resultado da soma é ${<span class="nome-variavel">z</span>}&lt;/p&gt;`)
+                    </p>
+
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio2()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>Crie três variáveis, na primeira variável coloque o total de uma
+                        compra, por exemplo 149.90. Na segunda variável coloque a
+                        quantidade de parcelas, por exemplo 2. Na terceira variável coloque
+                        o valor da parcela. Apresente no documento html as seguintes
+                        informações: <br />
+                        <br />
+                        "O valor total da compra foi R$_,_" <br />
+                        "Forma de pagamento: _x de R$_,_"</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">totalCompra</span> = <span class="valor-variavel">149.9</span><br/>
+                        const <span class="nome-variavel">formaPagamento</span> = <span class="valor-variavel">"prazo"</span><br/>
+                        const <span class="nome-variavel">nParcelas</span> = <span class="valor-variavel">2</span><br/>
+                        <br/>
+                        const <span class="nome-variavel">valorParcela</span> = <span class="nome-variavel">totalCompra</span> / <span class="nome-variavel">nParcelas</span><br/>
+                        <br/>
+                        document.write(`&lt;p&gt;O valor total da compra foi R$ ${<span class="nome-variavel">totalCompra</span>}&lt;/p&gt;`)<br/>
+                        if (formaPagamento === "prazo") {  <br/>
+                        <span class="identacao">document.write(`&lt;p&gt;A forma de pagamento: ${<span class="nome-variavel">nParcelas</span>}x de R$ ${<span class="nome-variavel">valorParcela</span>}&lt;/p&gt;`)</span><br/>
+                        } else {<br/>
+                        <span class="identacao">document.write(`&lt;p&gt;A forma de pagamento: 1x de R$ ${<span class="nome-variavel">totalCompra</span>}&lt;/p&gt;`)</span><br/>
+                        }
+                    </p>
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio3()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>Crie duas variáveis. Na primeira coloque um total de minutos e
+                        defina um valor para ela (por exemplo, minutos = 120). Na segunda coloque o total em segundos destes minutos armazenados na
+                        primeira variável. Apresente no documento html a seguinte
+                        informação: <strong>"_ minutos equivale à _ segundos!"</strong></p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">minutos</span> = <span class="valor-variavel">120</span><br/><br/>
+                        const <span class="nome-variavel">segundos</span> = <span class="nome-variavel">minutos</span> * 60<br/>
+                        <br/>
+                        document.write(`&lt;p&gt;${<span class="nome-variavel">minutos</span>} minutos equivale à ${<span class="nome-variavel">segundos</span>} segundos&lt;/p&gt;`)
+                    </p>
+
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio4()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 5.</h3>
+                    <p>Crie cinco variáveis. Na primeira armazene o nome de um aluno. Na
+                        segunda, terceira e quarta coloque 3 notas (valores de 0 à 10).
+                        Calcule a média das notas e armazene na quinta variável criada.
+                        Apresente no documento html a seguinte informação:
+                        <strong>"O aluno _____ ficou com média _,_"</strong></p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">aluno</span> = <span class="valor-variavel">"Rodrigo"</span><br/>
+                        const <span class="nome-variavel">nota1</span> = <span class="valor-variavel">6</span><br/>
+                        const <span class="nome-variavel">nota2</span> = <span class="valor-variavel">7</span><br/>
+                        const <span class="nome-variavel">nota3</span> = <span class="valor-variavel">5</span><br/>
+                        <br/>
+                        const <span class="nome-variavel">media</span> = (<span class="nome-variavel">nota1</span> + <span class="nome-variavel">nota2</span> + <span class="nome-variavel">nota3</span>) / 3<br/>
+                        <br/>
+                        document.write(`&lt;p&gt;O aluno ${<span class="nome-variavel">aluno</span>} ficou com média ${<span class="nome-variavel">media</span>}&lt;p&gt;`)
+                    </p>
+
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio5()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 6.</h3>
+                    <p>Desenvolva um algoritmo que armazene o valor 10 em uma variável
+                        A e o valor 20 em uma variável B. A seguir (utilizando apenas
+                        atribuições entre variáveis) troque os seus conteúdos fazendo com
+                        que o valor que está em A passe para B e vice-versa. Ao final,
+                        escrever os valores que ficaram armazenados nas variáveis.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        let <span class="nome-variavel">a</span> = <span class="valor-variavel">10</span><br/>
+                        let <span class="nome-variavel">b</span> = <span class="valor-variavel">20</span><br/>
+                        const <span class="nome-variavel">reserva</span> = <span class="nome-variavel">a</span><br />
+                        <br />
+                        <span class="nome-variavel">a</span> = <span class="nome-variavel">b</span><br />
+                        <span class="nome-variavel">b</span> = <span class="nome-variavel">reserva</span><br />
+                        <br />
+                        document.write(`&lt;p&gt;Variavel A: ${<span class="nome-variavel">a</span>}&lt;/p&gt;`)<br />
+                        document.write(`&lt;p&gt;Variavel B: ${<span class="nome-variavel">b</span>}&lt;/p&gt;`)<br />
+                    </p>
+
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio6()
+                    </script>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 7.</h3>
+                    <p>Desenvolva um algoritmo para ler o número total de eleitores de um
+                        município, o número de votos brancos, nulos e válidos. Calcular e
+                        escrever o percentual que cada um representa em relação ao total
+                        de eleitores.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        <span class="comentario">// Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
+                        const <span class="nome-variavel">totalEleitores</span> = <span class="valor-variavel">1000</span> <span class="comentario">// Number(prompt('Insira o TOTAL DE ELEITORES:'))<br /></span> 
+                        let <span class="nome-variavel">votosBrancos</span> = <span class="valor-variavel">50</span><span class="comentario"> // Number(prompt('Insira o TOTAL DE VOTOS BRANCOS:'))</span><br />
+                        let <span class="nome-variavel">votosNulos</span> = <span class="valor-variavel">125</span><span class="comentario"> // Number(prompt('Insira o TOTAL DE VOTOS NULOS:'))</span><br />
+                        let <span class="nome-variavel">votosValidos</span> = <span class="nome-variavel">totalEleitores</span> - (<span class="nome-variavel">votosBrancos</span> + <span class="nome-variavel">votosNulos</span>)<br />
+                        <br />
+                        <span class="nome-variavel">votosBrancos</span> = (<span class="nome-variavel">votosBrancos</span> / <span class="nome-variavel">totalEleitores</span>) * 100<br />
+                        <span class="nome-variavel">votosNulos</span> = (<span class="nome-variavel">votosNulos</span> / <span class="nome-variavel">totalEleitores</span>) * 100<br />
+                        <span class="nome-variavel">votosValidos</span> = (<span class="nome-variavel">votosValidos</span> / <span class="nome-variavel">totalEleitores</span>) * 100<br />
+                        <br />
+                        document.write(`&lt;p&gt;Votos Totais: ${<span class="nome-variavel">totalEleitores</span>}&lt;/p&gt;`)<br />
+                        document.write(`&lt;p&gt;Votos Validos: ${<span class="nome-variavel">votosValidos</span>.toFixed(2)}%&lt;/p&gt;`)<br />
+                        document.write(`&lt;p&gt;Votos Brancos: ${<span class="nome-variavel">votosBrancos</span>.toFixed(2)}%&lt;/p&gt;`)<br />
+                        document.write(`&lt;p&gt;Votos Nulos: ${<span class="nome-variavel">votosNulos</span>.toFixed(2)}%&lt;/p&gt;`)<br />
+                    </p>
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio7()
+                    </script>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 8.</h3>
+                    <p>Desenvolva um algoritmo para ler dois valores e imprimir uma das
+                        três mensagens a seguir:<br/>
+                        a. ‘Números iguais’, caso os números sejam iguais;<br/>
+                        b. ‘Primeiro é maior’, caso o primeiro seja maior que o segundo;<br/>
+                        c. ‘Segundo maior’, caso o segundo seja maior que o primeiro.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        <span class="comentario">// Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
+                        const <span class="nome-variavel">valor1</span> = <span class="valor-variavel">7</span> <span class="comentario">// Number(prompt('Insira o VALOR 1: '))</span><br />
+                        const <span class="nome-variavel">valor2</span> = <span class="valor-variavel">4</span> <span class="comentario">// Number(prompt('Insira o VALOR 2: '))</span><br />
+                        <br />
+                        if (<span class="nome-variavel">valor1</span> === <span class="nome-variavel">valor2</span>) {<br />
+                          <span class="identacao">document.write(`&lt;p&gt;NUMEROS IGUAIS!&lt;/p&gt;`)</span><br />
+                          <span class="identacao">document.write(`&lt;p&gt;O primeiro valor ${<span class="nome-variavel">valor1</span>} é igual ao segundo valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`)</span><br />
+                        } else if (<span class="nome-variavel">valor1</span> > <span class="nome-variavel">valor2</span>) {<br />
+                            <span class="identacao"></span>document.write(`&lt;p&gt;PRIMEIRO É MAIOR!&lt;/p&gt;`)<br />
+                            <span class="identacao"></span>document.write(`&lt;p&gt;O primeiro valor ${<span class="nome-variavel">valor1</span>} é MAIOR que o segundo valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`)<br />
+                        } else {<br />
+                            <span class="identacao">document.write(`&lt;p&gt;SEGUNDO É MAIOR!&lt;/p&gt;`)</span><br />
+                            <span class="identacao">document.write(`&lt;p&gt;O segundo valor ${<span class="nome-variavel">valor1</span>} é MAIOR que o primeiro valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`)</span>
+                        }
+                    </p>
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio8()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 9.</h3>
+                    <p>As maçãs desta estação custam R$0,30 se forem compradas
+                        menos do que uma dúzia, e R$0,25 se forem compradas pelo menos
+                        doze. Desenvolva um algoritmo que leia o número de maçãs
+                        compradas, calcule e escreva o valor total da compra.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
+                        const <span class="nome-variavel">nVendas</span> = <span class="valor-variavel">24</span> <span class="comentario">// Number(prompt('Quantas maças você deseja comprar? '))</span><br />
+                        <br />
+                        if (<span class="nome-variavel">nVendas</span> < 12) {<br />
+                            <span class="identacao">const <span class="nome-variavel">maca</span> = 0.30</span><br />
+                            <span class="identacao">const <span class="nome-variavel">valorTotal</span> = maca * <span class="nome-variavel">nVendas</span></span><br />
+                            <span class="identacao">document.write(`&lt;p&gt;O valor total foi de R$ ${<span class="nome-variavel">valorTotal</span>.toFixed(2)}&lt;/p&gt;`)</span><br />
+                        } else {<br />
+                            <span class="identacao">const <span class="nome-variavel">maca</span> = 0.25</span><br />
+                            <span class="identacao">const <span class="nome-variavel">valorTotal</span> = <span class="nome-variavel">maca</span> * <span class="nome-variavel">nVendas</span></span><br />
+                            <span class="identacao">document.write(`&lt;p&gt;O valor total foi de R$ ${<span class="nome-variavel">valorTotal</span>.toFixed(2)}&lt;/p&gt;`)</span><br />
+                        }
+                    </p>
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio9()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 10.</h3>
+                    <p>Escreva um algoritmo que tenha como valores de entradas o nome
+                        e idade do usuário e imprima no terminal o nome, a idade e o ano
+                        de nascimento do usuário. Ex: “Nome: Pedro, Idade: 22 anos, nasceu
+                        em 2000”.
+                        OBS: Pegue o ano atual como base.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
+                        const <span class="nome-variavel">nome</span> = <span class="valor-variavel">"Rodrigo"</span> <span class="comentario">// prompt("Insira seu nome: ")</span><br />
+                        const <span class="nome-variavel">idade</span> = <span class="valor-variavel">25</span> <span class="comentario">// Number(prompt("Insira sua idade: "))</span><br />
+                        const <span class="nome-variavel">anoAtual</span> = new Date().getFullYear()<br />
+                        const <span class="nome-variavel">anoNascimento</span> = <span class="nome-variavel">anoAtual</span> - <span class="nome-variavel">idade</span><br />
+                        <br />
+                        document.write(`&lt;p&gt;Nome: ${<span class="nome-variavel">nome</span>}, Idade: ${<span class="nome-variavel">idade</span>} anos, nasceu em ${<span class="nome-variavel">anoNascimento</span>}&lt;/p&gt;`)<br />
+                    </p>
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio10()
+                    </script>
+                </div>
+            </div>
+            
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 11.</h3>
+                    <p>
+                        Crie um algoritmo que armazene um número inteiro positivo, e gere
+                        um alerta com as seguintes mensagens:<br />
+                        a. “Número é par!”, se o valor armazenado for par;<br />
+                        b. “Número é impar!”, se o valor armazenado for ímpar;
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
+                        const <span class="nome-variavel">numero</span> = <span class="valor-variavel">358</span> <span class="comentario">// Number(prompt("Insira um numero: "))</span><br />
+                        <br />
+                        if (<span class="nome-variavel">numero</span> % 2 === 0) {<br />
+                           <span class="identacao">document.write(`&lt;p&gt;O numero ${<span class="nome-variavel">numero</span>} é PAR!&lt;/p&gt;`)</span><br />
+                        } else {<br />
+                            <span class="identacao">document.write(`&lt;p&gt;O numero ${<span class="nome-variavel">numero</span>} é IMPAR&lt;/p&gt;`)</span><br />
+                        }<br />
+                    </p>
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio11()
+                    </script>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 12.</h3>
+                    <p>Escreva um algoritmo que tenha como valores de entradas o nome
+                        e idade do usuário e imprima no terminal o nome, a idade e o ano
+                        de nascimento do usuário. Ex: “Nome: Pedro, Idade: 22 anos, nasceu
+                        em 2000”.
+                        OBS: Pegue o ano atual como base.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
+                        const <span class="nome-variavel">anoAtual</span> = new Date().getFullYear()<br />
+                        const <span class="nome-variavel">anoNascimento</span> = <span class="valor-variavel">1998</span> <span class="comentario">// Number(prompt("Em qual ano você nasceu? "))</span><br />
+                        const <span class="nome-variavel">idade</span> = <span class="nome-variavel">anoAtual</span> - <span class="nome-variavel">anoNascimento</span><br />
+                        <br />
+                        if (<span class="nome-variavel">idade</span> >= 16) {<br />
+                            <span class="identacao">document.write(`&lt;p&gt;Você possui ${<span class="nome-variavel">idade</span>} anos e já pode votar este ano!&lt;/p&gt;`)</span><br />
+                        } else {<br />
+                            <span class="identacao">document.write(`&lt;p&gt;Você possui ${<span class="nome-variavel">idade</span>} anos e ainda não pode votar este ano!&lt;/p&gt;`)</span><br />
+                        }<br />
+                    </p>
+                </div>
+                <div class="box-resultado green">
+                    <script>                       
+                        exercicio12()
+                    </script>
+                </div>
+            </div>
+
+            
+        </section>
+    </main>
+
+</body>
+
+</html>
