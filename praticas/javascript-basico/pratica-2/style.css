@@ -24,7 +24,7 @@ main {
 }
 
 .exercicio {
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
 }
 
 .exercicio h3 {
@@ -49,6 +49,10 @@ main {
 
 .identacao {
     margin-left: 3vh;
+}
+
+.identacaoMaior {
+    margin-left: 6vh;
 }
 
 .box-resultado {
@@ -128,4 +132,21 @@ main {
         width: 110%;
         }
     }
+}
+
+.tabela {
+    margin: 2vh 0;
+}
+
+table,
+th,
+tr {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 1vh;
+    text-align:start;
+    font-size: .875rem;
 }

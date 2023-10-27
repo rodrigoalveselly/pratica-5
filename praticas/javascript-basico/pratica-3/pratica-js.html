@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>Desenvolva um algoritmo que leia a altura de 15 pessoas. Este
+                        programa deverá calcular e mostrar:<br />
+                        <br />
+                        a. A menor altura do grupo;<br />
+                        b. A maior altura do grupo;</p>
+                </div>
+                <div class="box-code blue">
+                        <p>
+                            const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                            let <span class="nome-variavel">altura</span> = <span class="valor-variavel">0</span><br />
+                            let <span class="nome-variavel">minAltura</span> = <span class="valor-variavel">1000</span><br />
+                            let <span class="nome-variavel">maxAltura</span> = <span class="valor-variavel">0</span><br />
+                            <br />
+                            for (let <span class="nome-variavel">i</span> = 1; <span class="nome-variavel">i</span> <= 5; <span class="nome-variavel">i</span>++) {<br />
+                                <span class="identacao"><span class="nome-variavel">altura</span> = Number(prompt('Insira a altura (EX:1.75): '))</span><br />
+                                <br />
+                                <span class="identacao">if (<span class="nome-variavel">altura</span> > <span class="nome-variavel">maxAltura</span>) {</span><br />
+                                    <span class="identacaoMaior"><span class="nome-variavel">maxAltura</span> = <span class="nome-variavel">altura</span></span><br />
+                                <span class="identacao">}</span><br />
+                                <br />
+                                <span class="identacao"></span>if (<span class="nome-variavel">altura</span> < <span class="nome-variavel">minAltura</span>) {<br />
+                                    <span class="identacaoMaior"><span class="nome-variavel">minAltura</span> = <span class="nome-variavel">altura</span></span><br />
+                                <span class="identacao">}</span><br />
+                            }<br />
+                            <br />
+                            <span class="nome-variavel">resultado</span>.innerHTML = `Altura máxima: ${<span class="nome-variavel">maxAltura</span>} m` + `Altura mínima: ${<span class="nome-variavel">minAltura</span>} m`<br />
+                            
+                        </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>Pedro tem 1,50m de altura e cresce 2 centímetros por ano, enquanto
+                        Lucas tem 1,10m de altura e cresce 3 centímetros por ano.
+                        Construa um algoritmo que calcule e imprima quantos anos serão
+                        necessários para que:<br />
+                        <br />
+                        a. Lucas e Pedro tenham o mesmo tamanho;<br />
+                        b. Lucas seja maior que Pedro.<br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
+                        let <span class="nome-variavel">alturaPedro</span> = <span class="valor-variavel">150</span><br />
+                        let <span class="nome-variavel">alturaLucas</span> = <span class="valor-variavel">110</span><br />
+                        let <span class="nome-variavel">anos</span> = <span class="valor-variavel">0</span><br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="valor-variavel">1</span>; <span class="nome-variavel">alturaLucas</span> < <span class="nome-variavel">alturaPedro</span>; <span class="nome-variavel">i</span>++) {<br />
+                            <span class="identacao"><span class="nome-variavel">alturaPedro</span> += <span class="valor-variavel">2</span></span><br />
+                            <span class="identacao"><span class="nome-variavel">alturaLucas</span> += <span class="valor-variavel">3</span></span><br />
+                            <span class="identacao"><span class="nome-variavel">anos</span> = <span class="nome-variavel">i</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `Em ${<span class="nome-variavel">anos</span>} anos Lucas e Pedro terão a mesma altura <br />` + `Em ${<span class="nome-variavel">anos</span>+<span class="valor-variavel">1</span>} anos Lucas será maior que Pedro`<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>Escreva um algoritmo que faça a tabuada de um número e
+                        apresente o resultado de acordo com o modelo a seguir, sabendo
+                        que o multiplicando deverá ser fornecido pelo usuário (n) e a
+                        quantidade de iterações também (i).<br />
+                        <br />
+                        <strong>1 * 2 = 2</strong><br />
+                        <strong>2 * 2 = 4</strong><br />
+                        <strong>3 * 2 = 6</strong><br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
+                        const <span class="nome-variavel">numero</span> = Number(prompt("Insira o numero que deseja saber a tabuada"))<br />
+                        const <span class="nome-variavel">multiplicador</span> = Number(prompt("Insira até quanto deseja ver a tabuada"))<br />
+                        let <span class="nome-variavel">i</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">tabuada</span> = <span class="valor-variavel">""</span><br />
+                        <br />
+                        while (<span class="nome-variavel">i</span> < <span class="nome-variavel">multiplicador</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">i</span>++</span><br />
+                            <span class="identacao"><span class="nome-variavel">valorFinal</span> = <span class="nome-variavel">numero</span> * <span class="nome-variavel">i</span></span><br />
+                            <span class="identacao"><span class="nome-variavel">tabuada</span> += `${<span class="nome-variavel">numero</span>} x ${<span class="nome-variavel">i</span>} = ${<span class="nome-variavel">valorFinal</span>}`</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">tabuada</span><br />
+                        
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>Escreva um algoritmo que percorra os números inteiros entre 1 e 250
+                        e verifique quais números são múltiplos de 3 e quais são múltiplos
+                        de 5.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio4')<br />
+                        const <span class="nome-variavel">numero</span> = <span class="valor-variavel">250</span><br />
+                        let <span class="nome-variavel">contadorM3</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">contadorM5</span> = <span class="valor-variavel">0</span><br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="valor-variavel">1</span>; <span class="nome-variavel">i</span> <= <span class="nome-variavel">numero</span>; <span class="nome-variavel">i</span>++) {<br />
+                            <span class="identacao">if (<span class="nome-variavel">i</span> % <span class="valor-variavel">3</span> === <span class="valor-variavel">0</span>) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">contadorM3</span>++</span><br />
+                            <span class="identacao">}</span><br />
+                            <br />
+                            <span class="identacao">if (<span class="nome-variavel">i</span> % <span class="valor-variavel">5</span> === <span class="valor-variavel">0</span>) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">contadorM5</span>++</span><br />
+                            <span class="identacao">}</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `Numero multiplos de 3 entre 1 e 250: ${<span class="nome-variavel">contadorM3</span>}` <br /> +  `Numero multiplos de 5 entre 1 e 250: ${<span class="nome-variavel">contadorM5</span>}`<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 5.</h3>
+                    <p>Faça um programa usando a estrutura “for” que leia um número
+                        inteiro positivo e mostre na tela uma contagem de 0 até o valor
+                        digitado:<br />
+                        <br />
+                        <span class="identacao">Ex: Digite um valor: 9</span><br />
+                        <span class="identacao">Contagem: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, FIM!</span><br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio5')<br />
+                        let <span class="nome-variavel">numero</span> = Number(prompt("Digite um valor: "))<br />
+                        let <span class="nome-variavel">contagem</span> = <span class="valor-variavel">""</span><br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="valor-variavel">0</span>; <span class="nome-variavel">i</span> <= <span class="nome-variavel">numero</span>; <span class="nome-variavel">i</span>++) {<br />
+                            <span class="identacao"><span class="nome-variavel">contagem</span> += `${<span class="nome-variavel">i</span>}, `</span><br />
+                        }<br />
+                        <span class="nome-variavel">contagem</span> += <span class="valor-variavel">"FIM!"</span><br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">contagem</span><br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio5()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio5"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 6.</h3>
+                    <p>Desenvolva um algoritmo que mostre uma contagem regressiva de
+                        30 até 1, marcando os números que forem primos, exatamente
+                        como mostrado abaixo:<br />
+                        <br />
+                        <span class="identacao">30 [29] 28 27 26 25 24 [23] 22 21 20 [19] 18 [17] 16...</span>
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio6')<br />
+                        let <span class="nome-variavel">divisiveis</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">numero</span> = Number(prompt("Insira até qual numero deseja ver os numeros primos: "))<br />
+                        let <span class="nome-variavel">sequencia</span> = <span class="valor-variavel">""</span><br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="nome-variavel">numero</span>; <span class="nome-variavel">i</span> > <span class="valor-variavel">0</span>; <span class="nome-variavel">i</span>--) {<br />
+                            <br />
+                            <span class="identacao">for (let <span class="nome-variavel">j</span> = <span class="valor-variavel">1</span>; <span class="nome-variavel">j</span> <= <span class="nome-variavel">numero</span>; <span class="nome-variavel">j</span>++) {</span><br />
+                                <span class="identacaoMaior">if (<span class="nome-variavel">i</span> % <span class="nome-variavel">j</span> === <span class="valor-variavel">0</span> && <span class="nome-variavel">i</span> % <span class="valor-variavel">1</span> === <span class="valor-variavel">0</span>) {</span><br />
+                                    <span class="identacaoMaxima"><span class="nome-variavel">divisiveis</span>++</span><br />
+                                <span class="identacaoMaior">}</span><br />
+                            <span class="identacao">}</span><br />
+                            <br />
+                            <span class="identacao">if (<span class="nome-variavel">divisiveis</span> === <span class="valor-variavel">2</span>) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">sequencia</span> += `[${<span class="nome-variavel">i</span>}] `</span><br />
+                            <span class="identacao">} else {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">sequencia</span> += `${<span class="nome-variavel">i</span>} `</span><br />
+                            <span class="identacao">}</span><br />
+                            <span class="identacao"><span class="nome-variavel">divisiveis</span> = <span class="valor-variavel">0</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">sequencia</span><br />
+                    </p>
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio6()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio6"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 7.</h3>
+                    <p>
+                        Desenvolva um algoritmo que leia 10 números, calcule e escreva a
+                        média aritmética dos valores lidos, a quantidade de valores
+                        positivos, a quantidade de valores negativos e o percentual de
+                        valores negativos e positivos.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio7')<br />
+                        let <span class="nome-variavel">nLeitura</span> = <span class="valor-variavel">5</span><br />
+                        let <span class="nome-variavel">soma</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">positivos</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">negativos</span> = <span class="valor-variavel">0</span><br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="valor-variavel">1</span>; <span class="nome-variavel">i</span> <= <span class="nome-variavel">nLeitura</span>; <span class="nome-variavel">i</span>++) {<br />
+                            <span class="identacao">let <span class="nome-variavel">numero</span> = Number(prompt("Insira um numero: "))</span><br />
+                            <span class="identacao"><span class="nome-variavel">soma</span> += <span class="nome-variavel">numero</span></span><br />
+                            <span class="identacao">if (<span class="nome-variavel">numero</span> > <span class="valor-variavel">0</span>) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">positivos</span>++</span><br />
+                            <span class="identacao">} else {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">negativos</span>++</span><br />
+                            <span class="identacao">}</span><br />
+                        }<br />
+                        <br />
+                        let <span class="nome-variavel">media</span> = <span class="nome-variavel">soma</span> / <span class="nome-variavel">nLeitura</span><br />
+                        let <span class="nome-variavel">positivoPerCent</span> = (<span class="nome-variavel">positivos</span>/<span class="nome-variavel">nLeitura</span>)*<span class="valor-variavel">100</span><br />
+                        let <span class="nome-variavel">negativoPerCent</span> = (<span class="nome-variavel">negativos</span>/<span class="nome-variavel">nLeitura</span>)*<span class="valor-variavel">100</span><br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `A média dos ${<span class="nome-variavel">nLeitura</span>} numeros inseridos é ${<span class="nome-variavel">media</span>} <br />` +
+                        `Entre os numeros, há ${<span class="nome-variavel">positivos</span>} positivo(s) e ${<span class="nome-variavel">negativos</span>} negativo(s). <br />` +
+                        `Isto representa ${<span class="nome-variavel">positivoPerCent</span>}% de numeros positivos e ${<span class="nome-variavel">negativoPerCent</span>}% de numeros negativos`<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio7()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio7"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            
+
+        </section>
+    </main>
+
+</body>
+
+</html>

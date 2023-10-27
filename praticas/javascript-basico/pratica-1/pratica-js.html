@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicios JS</title>
+    <title>Exercicios JS - 1</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js"></script>
 </head>
@@ -190,26 +190,25 @@
                 </div>
                 <div class="box-code blue">
                     <p>
-                        <span class="comentario">// Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
-                        const <span class="nome-variavel">totalEleitores</span> = <span class="valor-variavel">1000</span> <span class="comentario">// Number(prompt('Insira o TOTAL DE ELEITORES:'))<br /></span> 
-                        let <span class="nome-variavel">votosBrancos</span> = <span class="valor-variavel">50</span><span class="comentario"> // Number(prompt('Insira o TOTAL DE VOTOS BRANCOS:'))</span><br />
-                        let <span class="nome-variavel">votosNulos</span> = <span class="valor-variavel">125</span><span class="comentario"> // Number(prompt('Insira o TOTAL DE VOTOS NULOS:'))</span><br />
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio7')<br />
+                        const <span class="nome-variavel">totalEleitores</span> = Number(prompt('Insira o TOTAL DE ELEITORES:'))<br />
+                        let <span class="nome-variavel">votosBrancos</span> = Number(prompt('Insira o TOTAL DE VOTOS BRANCOS:'))<br />
+                        let <span class="nome-variavel">votosNulos</span> = Number(prompt('Insira o TOTAL DE VOTOS NULOS:'))<br />
                         let <span class="nome-variavel">votosValidos</span> = <span class="nome-variavel">totalEleitores</span> - (<span class="nome-variavel">votosBrancos</span> + <span class="nome-variavel">votosNulos</span>)<br />
                         <br />
                         <span class="nome-variavel">votosBrancos</span> = (<span class="nome-variavel">votosBrancos</span> / <span class="nome-variavel">totalEleitores</span>) * 100<br />
                         <span class="nome-variavel">votosNulos</span> = (<span class="nome-variavel">votosNulos</span> / <span class="nome-variavel">totalEleitores</span>) * 100<br />
                         <span class="nome-variavel">votosValidos</span> = (<span class="nome-variavel">votosValidos</span> / <span class="nome-variavel">totalEleitores</span>) * 100<br />
                         <br />
-                        document.write(`&lt;p&gt;Votos Totais: ${<span class="nome-variavel">totalEleitores</span>}&lt;/p&gt;`)<br />
-                        document.write(`&lt;p&gt;Votos Validos: ${<span class="nome-variavel">votosValidos</span>.toFixed(2)}%&lt;/p&gt;`)<br />
-                        document.write(`&lt;p&gt;Votos Brancos: ${<span class="nome-variavel">votosBrancos</span>.toFixed(2)}%&lt;/p&gt;`)<br />
-                        document.write(`&lt;p&gt;Votos Nulos: ${<span class="nome-variavel">votosNulos</span>.toFixed(2)}%&lt;/p&gt;`)<br />
+                        <span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;Votos Totais: ${<span class="nome-variavel">totalEleitores</span>}&lt;/p&gt;` + <br />
+                        `&lt;p&gt;Votos Validos: ${<span class="nome-variavel">votosValidos</span>.toFixed(2)}%&lt;/p&gt;` + <br />
+                        `&lt;p&gt;Votos Brancos: ${<span class="nome-variavel">votosBrancos</span>.toFixed(2)}%&lt;/p&gt;` + <br />
+                        `&lt;p&gt;Votos Nulos: ${<span class="nome-variavel">votosNulos</span>.toFixed(2)}%&lt;/p&gt;`<br />
                     </p>
                 </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio7()">Executar</button>
                 <div class="box-resultado green">
-                    <script>                       
-                        exercicio7()
-                    </script>
+                    <div id="exercicio7"><span class="comentario">Execute o código...</span></div>
                 </div>
             </div>
             <div class="box-content">
@@ -224,26 +223,25 @@
                 </div>
                 <div class="box-code blue">
                     <p>
-                        <span class="comentario">// Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
-                        const <span class="nome-variavel">valor1</span> = <span class="valor-variavel">7</span> <span class="comentario">// Number(prompt('Insira o VALOR 1: '))</span><br />
-                        const <span class="nome-variavel">valor2</span> = <span class="valor-variavel">4</span> <span class="comentario">// Number(prompt('Insira o VALOR 2: '))</span><br />
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio8')<br />
+                        const <span class="nome-variavel">valor1</span> = Number(prompt('Insira o VALOR 1: '))<br />
+                        const <span class="nome-variavel">valor2</span> = Number(prompt('Insira o VALOR 2: '))<br />
                         <br />
                         if (<span class="nome-variavel">valor1</span> === <span class="nome-variavel">valor2</span>) {<br />
-                          <span class="identacao">document.write(`&lt;p&gt;NUMEROS IGUAIS!&lt;/p&gt;`)</span><br />
-                          <span class="identacao">document.write(`&lt;p&gt;O primeiro valor ${<span class="nome-variavel">valor1</span>} é igual ao segundo valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`)</span><br />
+                          <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;NUMEROS IGUAIS!&lt;/p&gt;`</span><br />
+                          <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;O primeiro valor ${<span class="nome-variavel">valor1</span>} é igual ao segundo valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`</span><br />
                         } else if (<span class="nome-variavel">valor1</span> > <span class="nome-variavel">valor2</span>) {<br />
-                            <span class="identacao"></span>document.write(`&lt;p&gt;PRIMEIRO É MAIOR!&lt;/p&gt;`)<br />
-                            <span class="identacao"></span>document.write(`&lt;p&gt;O primeiro valor ${<span class="nome-variavel">valor1</span>} é MAIOR que o segundo valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`)<br />
+                            <span class="identacao"></span><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;PRIMEIRO É MAIOR!&lt;/p&gt;`<br />
+                            <span class="identacao"></span><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;O primeiro valor ${<span class="nome-variavel">valor1</span>} é MAIOR que o segundo valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`<br />
                         } else {<br />
-                            <span class="identacao">document.write(`&lt;p&gt;SEGUNDO É MAIOR!&lt;/p&gt;`)</span><br />
-                            <span class="identacao">document.write(`&lt;p&gt;O segundo valor ${<span class="nome-variavel">valor1</span>} é MAIOR que o primeiro valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`)</span>
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;SEGUNDO É MAIOR!&lt;/p&gt;`</span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;O segundo valor ${<span class="nome-variavel">valor1</span>} é MAIOR que o primeiro valor ${<span class="nome-variavel">valor2</span>}&lt;/p&gt;`</span>
                         }
                     </p>
                 </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio8()">Executar</button>
                 <div class="box-resultado green">
-                    <script>                       
-                        exercicio8()
-                    </script>
+                    <div id="exercicio8"><span class="comentario">Execute o código...</span></div>
                 </div>
             </div>
 
@@ -258,24 +256,23 @@
                 </div>
                 <div class="box-code blue">
                     <p>
-                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
-                        const <span class="nome-variavel">nVendas</span> = <span class="valor-variavel">24</span> <span class="comentario">// Number(prompt('Quantas maças você deseja comprar? '))</span><br />
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio9')<br />
+                        const <span class="nome-variavel">nVendas</span> = Number(prompt('Quantas maças você deseja comprar? '))<br />
                         <br />
                         if (<span class="nome-variavel">nVendas</span> < 12) {<br />
                             <span class="identacao">const <span class="nome-variavel">maca</span> = 0.30</span><br />
-                            <span class="identacao">const <span class="nome-variavel">valorTotal</span> = maca * <span class="nome-variavel">nVendas</span></span><br />
-                            <span class="identacao">document.write(`&lt;p&gt;O valor total foi de R$ ${<span class="nome-variavel">valorTotal</span>.toFixed(2)}&lt;/p&gt;`)</span><br />
+                            <span class="identacao">const <span class="nome-variavel">valorTotal</span> = <span class="nome-variavel">maca</span> * <span class="nome-variavel">nVendas</span></span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;O valor total foi de R$ ${<span class="nome-variavel">valorTotal</span>.toFixed(2)}&lt;/p&gt;`</span><br />
                         } else {<br />
                             <span class="identacao">const <span class="nome-variavel">maca</span> = 0.25</span><br />
                             <span class="identacao">const <span class="nome-variavel">valorTotal</span> = <span class="nome-variavel">maca</span> * <span class="nome-variavel">nVendas</span></span><br />
-                            <span class="identacao">document.write(`&lt;p&gt;O valor total foi de R$ ${<span class="nome-variavel">valorTotal</span>.toFixed(2)}&lt;/p&gt;`)</span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;O valor total foi de R$ ${<span class="nome-variavel">valorTotal</span>.toFixed(2)}&lt;/p&gt;`</span><br />
                         }
                     </p>
                 </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio9()">Executar</button>
                 <div class="box-resultado green">
-                    <script>                       
-                        exercicio9()
-                    </script>
+                    <div id="exercicio9"><span class="comentario">Execute o código...</span></div>
                 </div>
             </div>
 
@@ -291,19 +288,18 @@
                 </div>
                 <div class="box-code blue">
                     <p>
-                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
-                        const <span class="nome-variavel">nome</span> = <span class="valor-variavel">"Rodrigo"</span> <span class="comentario">// prompt("Insira seu nome: ")</span><br />
-                        const <span class="nome-variavel">idade</span> = <span class="valor-variavel">25</span> <span class="comentario">// Number(prompt("Insira sua idade: "))</span><br />
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio10')<br />
+                        const <span class="nome-variavel">nome</span> = prompt("Insira seu nome: ")<br />
+                        const <span class="nome-variavel">idade</span> = Number(prompt("Insira sua idade: "))<br />
                         const <span class="nome-variavel">anoAtual</span> = new Date().getFullYear()<br />
                         const <span class="nome-variavel">anoNascimento</span> = <span class="nome-variavel">anoAtual</span> - <span class="nome-variavel">idade</span><br />
                         <br />
-                        document.write(`&lt;p&gt;Nome: ${<span class="nome-variavel">nome</span>}, Idade: ${<span class="nome-variavel">idade</span>} anos, nasceu em ${<span class="nome-variavel">anoNascimento</span>}&lt;/p&gt;`)<br />
+                        <span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;Nome: ${<span class="nome-variavel">nome</span>}, Idade: ${<span class="nome-variavel">idade</span>} anos, nasceu em ${<span class="nome-variavel">anoNascimento</span>}&lt;/p&gt;`<br />
                     </p>
                 </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio10()">Executar</button>
                 <div class="box-resultado green">
-                    <script>                       
-                        exercicio10()
-                    </script>
+                    <div id="exercicio10"><span class="comentario">Execute o código...</span></div>
                 </div>
             </div>
             
@@ -319,51 +315,49 @@
                 </div>
                 <div class="box-code blue">
                     <p>
-                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
-                        const <span class="nome-variavel">numero</span> = <span class="valor-variavel">358</span> <span class="comentario">// Number(prompt("Insira um numero: "))</span><br />
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio11')<br />
+                        const <span class="nome-variavel">numero</span> = Number(prompt("Insira um numero: "))<br />
                         <br />
                         if (<span class="nome-variavel">numero</span> % 2 === 0) {<br />
-                           <span class="identacao">document.write(`&lt;p&gt;O numero ${<span class="nome-variavel">numero</span>} é PAR!&lt;/p&gt;`)</span><br />
+                           <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;O numero ${<span class="nome-variavel">numero</span>} é PAR!&lt;/p&gt;`</span><br />
                         } else {<br />
-                            <span class="identacao">document.write(`&lt;p&gt;O numero ${<span class="nome-variavel">numero</span>} é IMPAR&lt;/p&gt;`)</span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;O numero ${<span class="nome-variavel">numero</span>} é IMPAR&lt;/p&gt;`</span><br />
                         }<br />
                     </p>
                 </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio11()">Executar</button>
                 <div class="box-resultado green">
-                    <script>                       
-                        exercicio11()
-                    </script>
+                    <div id="exercicio11"><span class="comentario">Execute o código...</span></div>
                 </div>
             </div>
 
             <div class="box-content">
                 <div class="exercicio">
                     <h3>Exercicio 12.</h3>
-                    <p>Escreva um algoritmo que tenha como valores de entradas o nome
-                        e idade do usuário e imprima no terminal o nome, a idade e o ano
-                        de nascimento do usuário. Ex: “Nome: Pedro, Idade: 22 anos, nasceu
-                        em 2000”.
-                        OBS: Pegue o ano atual como base.
+                    <p>
+                        Escreva um algoritmo que armazene o ano atual e o ano de
+                        nascimento de uma pessoa. Escrever uma mensagem no console
+                        que diga se ela poderá ou não votar este ano (não é necessário
+                        considerar o mês em que a pessoa nasceu).
                     </p>
                 </div>
                 <div class="box-code blue">
                     <p>
-                        <span class="comentario"> // Por questão de organização os prompt estão comentados e os valores foram inseridos manualmente!</span><br />
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio12')<br />
                         const <span class="nome-variavel">anoAtual</span> = new Date().getFullYear()<br />
-                        const <span class="nome-variavel">anoNascimento</span> = <span class="valor-variavel">1998</span> <span class="comentario">// Number(prompt("Em qual ano você nasceu? "))</span><br />
+                        const <span class="nome-variavel">anoNascimento</span> = Number(prompt("Em qual ano você nasceu? "))<br />
                         const <span class="nome-variavel">idade</span> = <span class="nome-variavel">anoAtual</span> - <span class="nome-variavel">anoNascimento</span><br />
                         <br />
                         if (<span class="nome-variavel">idade</span> >= 16) {<br />
-                            <span class="identacao">document.write(`&lt;p&gt;Você possui ${<span class="nome-variavel">idade</span>} anos e já pode votar este ano!&lt;/p&gt;`)</span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;Você possui ${<span class="nome-variavel">idade</span>} anos e já pode votar este ano!&lt;/p&gt;`</span><br />
                         } else {<br />
-                            <span class="identacao">document.write(`&lt;p&gt;Você possui ${<span class="nome-variavel">idade</span>} anos e ainda não pode votar este ano!&lt;/p&gt;`)</span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.InnerHTML = `&lt;p&gt;Você possui ${<span class="nome-variavel">idade</span>} anos e ainda não pode votar este ano!&lt;/p&gt;`</span><br />
                         }<br />
                     </p>
                 </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio12()">Executar</button>
                 <div class="box-resultado green">
-                    <script>                       
-                        exercicio12()
-                    </script>
+                    <div id="exercicio12"><span class="comentario">Execute o código...</span></div>
                 </div>
             </div>
 

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>Escreva um algoritmo para ler uma temperatura em graus Celsius,
+                        calcular e escrever o valor correspondente em graus Fahrenheit.</p>
+                </div>
+                <div class="box-code blue">
+                        <p>
+                            const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                            const <span class="nome-variavel">tempCelsius</span> = Number(prompt("Insira a temperatura em graus celsius: "))<br />
+                            <br />
+                            const <span class="nome-variavel">tempFahrenheit</span> = (<span class="nome-variavel">tempCelsius</span>s * (5/9)) + 32<br />
+                            <span class="nome-variavel">resultado</span>.innerHTML = `A temperatura é de ${<span class="nome-variavel">tempFahrenheit</span>.toFixed(2)} ºF`<br /></p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>Crie um programa que peça um número de 1 a 7 e exiba o dia da
+                        semana correspondente utilizando a estrutura condicional switch.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
+                        const <span class="nome-variavel">diaNum</span> = Number(prompt("Insira o dia da semana: "))<br />
+                        let <span class="nome-variavel">diaSem</span><br />
+                        <br />
+                        switch (<span class="nome-variavel">diaNum</span>) {<br />
+                            <span class="identacao">case 1:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Domingo"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case 2:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Sábado"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case 3:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Segunda-feira"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case 4:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Terça-feira"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case 5:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Quarta-feira"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case 6:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Quinta-feira"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case 7:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Sexta-feira"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">default:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">diaSem</span> = <span class="valor-variavel">"Dia inválido"</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `Hoje é ${<span class="nome-variavel">diaSem</span>}` 
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>Crie um programa que peça um número e verifique se ele é positivo,
+                        negativo ou zero.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
+                        const <span class="nome-variavel">numero</span> = Number(prompt("Insira o numero a ser verificado "))<br />
+                        <br />
+                        if (<span class="nome-variavel">numero</span> > 0) {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `O numero ${<span class="nome-variavel">resultado</span>} é POSITIVO`</span><br />
+                        } else if (<span class="nome-variavel">numero</span> < 0) {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `O numero ${<span class="nome-variavel">resultado</span>} é NEGATIVO`</span><br />
+                        } else {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `O numero é ZERO`</span><br />
+                        }
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>O custo de um carro novo ao consumidor é a soma do custo de
+                        fábrica com a porcentagem do distribuidor e dos impostos
+                        (aplicados ao custo de fábrica). Supondo que o percentual do
+                        distribuidor seja de 28% e os impostos de 45%, escrever um
+                        algoritmo para ler o custo de fábrica de um carro,calcular e escrever
+                        o custo final ao consumidor.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio4')<br />
+                        const <span class="nome-variavel">custoFabrica</span> = Number(prompt("Insira o custo de fabrica do carro: "))<br />
+                        const <span class="nome-variavel">distribuidor</span> = <span class="valor-variavel">0.28</span><br />
+                        const <span class="nome-variavel">impostos</span> = <span class="valor-variavel">0.45</span><br />
+                        <br />
+                        const <span class="nome-variavel">precoCarro</span> = (<span class="nome-variavel">custoFabrica</span> * <span class="nome-variavel">distribuidor</span>) + (<span class="nome-variavel">custoFabrica</span> * <span class="nome-variavel">impostos</span>) + <span class="nome-variavel">custoFabrica</span><br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `O preço final do carro é ${<span class="nome-variavel">precoCarro</span>.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 5.</h3>
+                    <p>Desenvolva um algoritmo que faça o cálculo do índice de massa
+                        corporal de uma pessoa. Esse algoritmo deve solicitar ao usuário
+                        que digite sua altura, em seguida solicitar que digite seu peso e que
+                        lhe exiba o status. O status vai variar da seguinte forma: <br />
+                        <br />
+                        a. Se o IMC for menor que 18,5 o status a ser mostrado deve ser
+                        “Você está abaixo da faixa de peso ideal”;<br />
+                        b. Se o IMC estiver acima de 24,99 o status a ser mostrado será
+                        “Você está acima da faixa de peso ideal”;<br />
+                        c. Se o IMC for igual ou maior que 18,5 e igual ou menor que
+                        24,99, o status a ser mostrado será “Você está dentro da faixa
+                        de peso ideal”.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio5')<br />
+                        const <span class="nome-variavel">altura</span> = Number(prompt("Insira a altura EX:1.75: "))<br />
+                        const <span class="nome-variavel">peso</span> = Number(prompt("Insira o peso: "))<br />
+                        <br />
+                        const <span class="nome-variavel">imc</span> = <span class="nome-variavel">peso</span> / (<span class="nome-variavel">altura</span> ** 2)<br />
+                        <br />
+                        <br />
+                        if (<span class="nome-variavel">imc</span> < 18.5) {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `Seu IMC é ${<span class="nome-variavel">imc</span>.toFixed(1)}! Você está abaixo da faixa de peso ideal`</span><br />
+                        } else if (<span class="nome-variavel">imc</span> > 24.99) {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `Seu IMC é ${<span class="nome-variavel">imc</span>.toFixed(1)}! Você está acima da faixa de peso ideal`</span><br />
+                        } else {<br />
+                           <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `Seu IMC é ${<span class="nome-variavel">imc</span>.toFixed(1)}! Você está dentro da faixa de peso ideal`</span><br />
+                        }
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio5()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio5"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 6.</h3>
+                    <p>Escreva um algoritmo que solicite 2 números e uma operação
+                        matemática. O algoritmo deve realizar o cálculo com os 2 números
+                        digitados conforme a operação informada.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio6')<br />
+                        const <span class="nome-variavel">num1</span> = Number(prompt("Insira o numero 1: "))<br />
+                        const <span class="nome-variavel">num2</span> = Number(prompt("Insira o numero 2: "))<br />
+                        const <span class="nome-variavel">operacao</span> = prompt("Insira qual operação deseja fazer: SOMA, SUBTRAÇÃO, DIVISÃO ou MULTIPLICAÇÃO")<br />
+                        let <span class="nome-variavel">valorFinal</span><br />
+                        <br />
+                        <br />
+                        switch (<span class="nome-variavel">operacao</span>.toLowerCase()) {<br />
+                            <span class="identacao">case <span class="valor-variavel">"soma"</span>:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">valorFinal</span> = <span class="nome-variavel">num1</span> + <span class="nome-variavel">num2</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case <span class="valor-variavel">"subtração"</span>:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">valorFinal</span> = <span class="nome-variavel">num1</span> - <span class="nome-variavel">num2</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case <span class="valor-variavel">"divisão"</span>:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">valorFinal</span> = <span class="nome-variavel">num1</span> / <span class="nome-variavel">num2</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">case <span class="valor-variavel">"multiplicação"</span>:</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">valorFinal</span> = <span class="nome-variavel">num1</span> * <span class="nome-variavel">num2</span></span><br />
+                                <span class="identacaoMaior">break</span><br />
+                            <span class="identacao">default:</span><br />
+                            <span class="identacaoMaior"><span class="nome-variavel">valorFinal</span> = <span class="valor-variavel">"Operação invalida!"</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `O resultado foi ${<span class="nome-variavel">valorFinal</span>}`
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio6()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio6"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 7.</h3>
+                    <p>Faça um algoritmo que simule um caixa eletrônico. Nesse algoritmo
+                        a conta do usuário deve ser criada já com um saldo positivo. O
+                        usuário precisa informar a quantidade de dinheiro que deseja
+                        retirar, esse valor deve ser um número positivo, múltiplo de 5 e
+                        menor do que o saldo. Cada saque eletrônico cobra uma taxa de
+                        R$4.50. Ao final deve ser informado o saldo da conta caso dê tudo
+                        certo com o saque, e se o usuário informar um valor maior que o
+                        saldo deve ser informado ao usuário que o mesmo não tem dinheiro
+                        suficiente em conta para realizar o saque.<br />
+                        <br />
+                        <strong>OBS:</strong> Na verificação se o valor do saque é maior que o saldo deve
+                        ser considerado e também contabilizado o valor da taxa a ser
+                        cobrada pelo saque. Ou seja, o valor a ser sacado somado ao valor
+                        da taxa do saque não pode ser maior que o saldo disponível.</p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio7')<br />
+                        const <span class="nome-variavel">taxaSaque</span> = <span class="valor-variavel">4.50</span><br />
+                        let <span class="nome-variavel">saldoBancario</span> = <span class="valor-variavel">2000</span><br />
+                        <br />
+                        let <span class="nome-variavel">saque</span> = Number(prompt(`Seu saldo é ${<span class="nome-variavel">saldoBancario</span>.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. Quanto deseja sacar? `))<br />
+                        <br />
+                        if (<span class="nome-variavel">saque</span> > 0 && <span class="nome-variavel">saque</span> % 5 === 0 && (<span class="nome-variavel">saque</span> + <span class="nome-variavel">taxaSaque</span>) < <span class="nome-variavel">saldoBancario</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">saldoBancario</span> = <span class="nome-variavel">saldoBancario</span> - (<span class="nome-variavel">resultado</span> + <span class="nome-variavel">taxaSaque</span>)</span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `Você sacou ${<span class="nome-variavel">saque</span>.toLocaleString(...)}. Seu saldo atual é de ${<span class="nome-variavel">saldoBancario</span>.toLocaleString(...)}`</span><br />
+                        } else if ((<span class="nome-variavel">saque</span> + <span class="nome-variavel">taxaSaque</span>) > <span class="nome-variavel">saldoBancario</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `Valor excede o saldo disponivel de ${<span class="nome-variavel">saldoBancario</span>.toLocaleString(...)}`</span><br />
+                        } else {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `Valor invalido. O caixa possui notas de R$ 200, R$ 100, R$ 50, R$ 20, R$ 10, R$ 5!`</span><br />
+                        }<br />
+                        <br />
+                        <span class="comentario">A função .toLocaleString() está abreviada após a primeira aparição por uma questão de melhor visualização!</span>
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio7()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio7"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 8.</h3>
+                    <p>Faça um algoritmo que leia a idade e peso de um atleta e imprima
+                        a sua categoria, de acordo com a seguinte tabela:
+                    </p>
+                    <div class="tabela">
+                        <table border="1">
+                            <tr>
+                                <th>Idade</th>
+                                <th>Peso</th>
+                                <th>Categoria</th>
+                            </tr>
+                            <tr>
+                                <td>Até 12 anos</td>
+                                <td>-</td>
+                                <td>Infantil</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">13 a 16 anos</td>
+                                <td>Até 40kg</td>
+                                <td>Juvenil Leve</td>
+                            </tr>
+                            <tr>
+                                <td>Acima de 40kg</td>
+                                <td>Juvenil Pesado</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">17 a 24 anos</td>
+                                <td>Até 45kg</td>
+                                <td>Sênior Leve</td>
+                            </tr>
+                            <tr>
+                                <td>Acima de 45kg até 60kg</td>
+                                <td>Sênior Médio</td>
+                            </tr>
+                            <tr>
+                                <td>Acima de 60kg</td>
+                                <td>Sênior Pesado</td>
+                            </tr>
+                            <tr>
+                                <td>Acima de 24 anos</td>
+                                <td>-</td>
+                                <td>Veterano</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio8')<br />
+                        const <span class="nome-variavel">idade</span> = Number(prompt("Insira a idade "))<br />
+                        const <span class="nome-variavel">peso</span> = Number(prompt("Insira o peso: "))<br />
+                        let <span class="nome-variavel">categoria</span><br />
+                        <br />
+                        <br />
+                        if (<span class="nome-variavel">idade</span> <= 12) {<br />
+                            <span class="identacao"><span class="nome-variavel">categoria</span> = <span class="valor-variavel">Infantil</span>""</span><br />
+                        <br />
+                        } else if (<span class="nome-variavel">idade</span> >= 13 && <span class="nome-variavel">idade</span> <= 16) {<br />
+                            <span class="identacao">if (<span class="nome-variavel">peso</span> <= 40) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">categoria</span> = <span class="valor-variavel">"Juvenil Leve"</span></span><br />
+                                <span class="identacao">} else {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">categoria</span> = <span class="valor-variavel">"Juvenil Pesado"</span></span><br />
+                            }<br />
+                        <br />
+                        } else if (<span class="nome-variavel">idade</span> >= 17 && <span class="nome-variavel">idade</span> <= 24) {<br />
+                            <span class="identacao">if (<span class="nome-variavel">peso</span> <= 45) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">categoria</span> = <span class="valor-variavel">"Senior Leve"</span></span><br />
+                            <span class="identacao">} else if (<span class="nome-variavel">peso</span> > 60) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">categoria</span> = <span class="valor-variavel">"Senior Pesado"</span></span><br />
+                            <span class="identacao">} else {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">categoria</span> = <span class="valor-variavel">"Senior Médio"</span></span><br />
+                            }<br />
+                        <br />
+                        } else {<br />
+                            <span class="identacao"><span class="nome-variavel">categoria</span> = <span class="valor-variavel">"Veterano"</span></span><br />
+                        }<br />
+                        <br />
+                        const <span class="nome-variavel">resultado</span>.innerHTML = `Categoria: ${<span class="nome-variavel">categoria</span>}`<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio8()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio8"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 9.</h3>
+                    <p>Escreva um programa que pergunte a velocidade de um carro. Caso
+                        ultrapasse 80Km/h, exiba uma mensagem dizendo que o usuário foi
+                        multado. Nesse caso, exiba o valor da multa, cobrando R$5 por cada
+                        km acima da velocidade permitida.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio9')<br />
+                        const <span class="nome-variavel">velocidadeCarro</span> = Number(prompt("Insira a velocdade do carro: "))<br />
+                        const <span class="nome-variavel">limite</span> = <span class="valor-variavel">80</span><br />
+                        let <span class="nome-variavel">excedido</span><br />
+                        let <span class="nome-variavel">multa</span><br />
+                        <br />
+                        if (<span class="nome-variavel">velocidadeCarro</span> > <span class="nome-variavel">limite</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">excedido</span> = <span class="nome-variavel">velocidadeCarro</span> - <span class="nome-variavel">limite</span></span><br />
+                            <span class="identacao"><span class="nome-variavel">multa</span> = <span class="nome-variavel">excedido</span> * 5</span><br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = `MULTA DE R$ ${<span class="nome-variavel">multa</span>}! Você excedeu o limite de velocidade em ${<span class="nome-variavel">excedido</span>} Km/h`</span><br />
+                        } else {<br />
+                            <span class="identacao"><span class="nome-variavel">resultado</span>.innerHTML = "Use cinto de segurança. BOA VIAGEM!"</span><br />
+                        }
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio9()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio9"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -68,9 +68,10 @@ const exercicio6 = () => {
 
 
 const exercicio7 = () => {
-    const totalEleitores = 1000 // Number(prompt('Insira o TOTAL DE ELEITORES:'))
-    let votosBrancos = 50 // Number(prompt('Insira o TOTAL DE VOTOS BRANCOS:'))
-    let votosNulos = 125 // Number(prompt('Insira o TOTAL DE VOTOS NULOS:'))
+    const resultado = document.getElementById('exercicio7')
+    const totalEleitores = Number(prompt('Insira o TOTAL DE ELEITORES:'))
+    let votosBrancos =  Number(prompt('Insira o TOTAL DE VOTOS BRANCOS:'))
+    let votosNulos =  Number(prompt('Insira o TOTAL DE VOTOS NULOS:'))
     let votosValidos = totalEleitores - (votosBrancos + votosNulos)
     
     votosBrancos = (votosBrancos / totalEleitores) * 100
@@ -78,82 +79,86 @@ const exercicio7 = () => {
     votosValidos = (votosValidos / totalEleitores) * 100
     
     
-    document.write(`<p>Votos Totais: ${totalEleitores}</p>`)
-    document.write(`<p>Votos Validos: ${votosValidos.toFixed(2)}%</p>`)
-    document.write(`<p>Votos Brancos: ${votosBrancos.toFixed(2)}%</p>`)
-    document.write(`<p>Votos Nulos: ${votosNulos.toFixed(2)}%</p>`)
+    resultado.innerHTML = `<p>Votos Totais: ${totalEleitores}</p>` + 
+    `<p>Votos Validos: ${votosValidos.toFixed(2)}%</p>` + 
+    `<p>Votos Brancos: ${votosBrancos.toFixed(2)}%</p>` + 
+    `<p>Votos Nulos: ${votosNulos.toFixed(2)}%</p>`
 }
 
 
 
 
 const exercicio8 = () => {
-    const valor1 = 7 // Number(prompt('Insira o VALOR 1: ')) 
-    const valor2 = 4 // Number(prompt('Insira o VALOR 2: '))
+    const resultado = document.getElementById('exercicio8')
+    const valor1 = Number(prompt('Insira o VALOR 1: ')) 
+    const valor2 =  Number(prompt('Insira o VALOR 2: '))
     
     if (valor1 === valor2) {
-        document.write(`<p>NUMEROS IGUAIS!</p>`)
-        document.write(`<p>O primeiro valor ${valor1} é igual ao segundo valor ${valor2}</p>`)
+        resultado.innerHTML = `<p>NUMEROS IGUAIS!</p>` +
+        `<p>O primeiro valor ${valor1} é igual ao segundo valor ${valor2}</p>`
     } else if (valor1 > valor2) {
-        document.write(`<p>PRIMEIRO É MAIOR!</p>`)
-        document.write(`<p>O primeiro valor ${valor1} é MAIOR que o segundo valor ${valor2}</p>`)
+        resultado.innerHTML = `<p>PRIMEIRO É MAIOR!</p>` +
+        `<p>O primeiro valor ${valor1} é MAIOR que o segundo valor ${valor2}</p>`
     } else {
-        document.write(`<p>SEGUNDO É MAIOR!</p>`)
-        document.write(`<p>O segundo valor ${valor1} é MAIOR que o primeiro valor ${valor2}</p>`)
+        resultado.innerHTML = `<p>SEGUNDO É MAIOR!</p>` +
+        `<p>O segundo valor ${valor1} é MAIOR que o primeiro valor ${valor2}</p>`
     }
 }
 
 
 
 const exercicio9 = () => {
-
-    const nVendas = 24 // Number(prompt('Quantas maças você deseja comprar? ')) 
+    const resultado = document.getElementById('exercicio9')
+    const nVendas = Number(prompt('Quantas maças você deseja comprar? ')) 
 
     if (nVendas < 12) {
         const maca = 0.30
         const valorTotal = maca * nVendas
-        document.write(`<p>O valor total foi de R$ ${valorTotal.toFixed(2)}</p>`)
+        resultado.innerHTML = `<p>O valor total foi de R$ ${valorTotal.toFixed(2)}</p>`
     } else {
         const maca = 0.25
         const valorTotal = maca * nVendas
-        document.write(`<p>O valor total foi de R$ ${valorTotal.toFixed(2)}</p>`)
+        resultado.innerHTML = `<p>O valor total foi de R$ ${valorTotal.toFixed(2)}</p>`
     }
 }
 
 
 
 const exercicio10 = () => {
-    const nome = "Rodrigo" // prompt("Insira seu nome: ")
-    const idade = 25 // Number(prompt("Insira sua idade: "))
+    const resultado = document.getElementById('exercicio10')
+    const nome = prompt("Insira seu nome: ")
+    const idade = Number(prompt("Insira sua idade: "))
     const anoAtual = new Date().getFullYear()
     const anoNascimento = anoAtual - idade
     
-    document.write(`<p>Nome: ${nome}, Idade: ${idade} anos, nasceu em ${anoNascimento}</p>`)
+    resultado.innerHTML = `<p>Nome: ${nome}, Idade: ${idade} anos, nasceu em ${anoNascimento}</p>`
 }
 
 
 
 
 const exercicio11 = () => {
-    const numero = 358 // Number(prompt("Insira um numero: "))
+    const resultado = document.getElementById('exercicio11')
+    const numero = Number(prompt("Insira um numero: "))
 
     if (numero % 2 === 0) {
-        document.write(`<p>O numero ${numero} é PAR!</p>`)
+        resultado.innerHTML = `<p>O numero ${numero} é PAR!</p>`
     } else {
-        document.write(`<p>O numero ${numero} é IMPAR</p>`)
+        resultado.innerHTML = `<p>O numero ${numero} é IMPAR</p>`
     }
 }
 
 
 
 const exercicio12 = () => {
+    const resultado = document.getElementById('exercicio12')
     const anoAtual = new Date().getFullYear()
-    const anoNascimento = 1998 // Number(prompt("Em qual ano você nasceu? "))
+    const anoNascimento = Number(prompt("Em qual ano você nasceu? "))
     const idade = anoAtual - anoNascimento
 
     if (idade >= 16) {
-        document.write(`<p>Você possui ${idade} anos e já pode votar este ano!</p>`)
+        resultado.innerHTML = `<p>Você possui ${idade} anos e já pode votar este ano!</p>`
     } else {
-        document.write(`<p>Você possui ${idade} anos e ainda não pode votar este ano!</p>`)
+        resultado.innerHTML = `<p>Você possui ${idade} anos e ainda não pode votar este ano!</p>`
     }
 }
