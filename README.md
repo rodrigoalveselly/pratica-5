@@ -84,7 +84,7 @@
 
 ##  📝 Pratica 13
 
-* CSS NA PRÁTICA - Estruturas de repetição - Parte 2.
+* Exercicios JS - Estruturas de repetição - Parte 2.
 
 
 
