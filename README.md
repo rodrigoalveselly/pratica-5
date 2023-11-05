@@ -68,4 +68,23 @@
 
 * CSS NA PRÁTICA - Orientação com CSS - Parte 4.
 
+<br>
+
+##  📝 Pratica 11
+
+* Exercicios JS - Lógica básica.
+
+* <br>
+
+##  📝 Pratica 12
+
+* Exercicios JS - Estruturas de repetição - Parte 1.
+
+<br>
+
+##  📝 Pratica 13
+
+* Exercicios JS - Estruturas de repetição - Parte 2.
+
+
 
