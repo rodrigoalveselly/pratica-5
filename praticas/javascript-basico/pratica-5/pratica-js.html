@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>
+                        Faça um algoritmo que leia a idade de vários alunos de uma turma.
+                        O programa vai parar quando for digitada a idade 999. No final,
+                        mostre quantos alunos existem na turma e qual é a média de idade
+                        do grupo.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                        <p>
+                            const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                            let <span class="nome-variavel">idade</span> = <span class="valor-variavel">0</span><br />
+                            let <span class="nome-variavel">soma</span> = <span class="valor-variavel">0</span><br />
+                            let <span class="nome-variavel">contador</span> = <span class="valor-variavel">0</span><br />
+                            let <span class="nome-variavel">continuar</span> = <span class="valor-variavel">true</span><br />
+                            <br />
+                            while (<span class="nome-variavel">continuar</span>) {<br />
+                                <span class="identacao"><span class="nome-variavel">idade</span> = Number(prompt('Insira a idade: '))</span><br />
+                                <br />
+                                <span class="identacao">if (<span class="nome-variavel">idade</span> === <span class="valor-variavel">999</span>) {</span><br />
+                                    <span class="identacaoMaior"><span class="nome-variavel">continuar</span> = <span class="valor-variavel">false</span></span><br />
+                                <span class="identacao">} else {</span><br />
+                                    <span class="identacaoMaior"><span class="nome-variavel">soma</span> += <span class="nome-variavel">idade</span></span><br />
+                                    <span class="identacaoMaior"><span class="nome-variavel">contador</span>++</span><br />
+                                <span class="identacao">}</span><br />
+                            }<br />
+                            <br />
+                            let <span class="nome-variavel">media</span> = <span class="nome-variavel">soma</span> / <span class="nome-variavel">contador</span><br />
+                            <br />
+                            <span class="nome-variavel">resultado</span>.innerHTML = `<p>Existem ${<span class="nome-variavel">contador</span>} alunos na turma e a média de idade é ${<span class="nome-variavel">media</span>.toFixed(2)} anos`</p><br />
+                            
+                        </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>
+                        Desenvolva um aplicativo que leia o salário e o sexo de vários
+                        funcionários. No final, mostre o total de salários pagos aos homens e
+                        o total pago às mulheres. O programa vai perguntar ao usuário se
+                        ele quer continuar ou não sempre que ler os dados de um
+                        funcionário.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
+                        let <span class="nome-variavel">salario</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">sexo</span><br />
+                        let <span class="nome-variavel">salarioHomem</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">salarioMulher</span> = <span class="valor-variavel">0</span><br />
+                        let <span class="nome-variavel">continuar</span> = <span class="valor-variavel">true</span><br />
+                        <br />
+                        while (<span class="nome-variavel">continuar</span>) {<br />
+                            <span class="identacao"></span><br />
+                            <span class="identacao"><span class="nome-variavel">salario</span> = Number(prompt('Qual seu salário? '))</span><br />
+                            <span class="identacao"><span class="nome-variavel">sexo</span> = prompt('Qual seu sexo? (M -> Masculino/F -> Feminino) ')</span><br />
+                            <br />
+                            <span class="identacao">if (<span class="nome-variavel">sexo</span>.toUpperCase() === "M") {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">salarioHomem</span> = <span class="nome-variavel">salario</span></span><br />
+                            <span class="identacao">} else if (<span class="nome-variavel">sexo</span>.toUpperCase() === "F") {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">salarioMulher</span> = <span class="nome-variavel">salario</span></span><br />
+                            <span class="identacao">} else {</span><br />
+                                <span class="identacaoMaior">alert('Sexo inválido!')</span><br />
+                                <span class="identacaoMaior">continue</span><br />
+                            <span class="identacao">}</span><br />
+                            <br />
+                            <span class="identacao"><span class="nome-variavel">continuar</span> = confirm('Deseja inserir mais um funcionário?')</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `O total pago para os homens é de R$ ${<span class="nome-variavel">salarioHomem</span>} e o total pago para as mulheres é de R$ ${<span class="nome-variavel">salarioMulher</span>}`<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>
+                        Crie um algoritmo que leia o valor inicial da contagem, o valor final e
+                        o incremento, mostrando em seguida todos os valores no intervalo:<br />
+                        <span class="identacao">Ex:</span><br />
+                        <span class="identacao">Digite o primeiro Valor: 3</span><br />
+                        <span class="identacao">Digite o último Valor: 10</span><br />
+                        <span class="identacao">Digite o incremento: 2</span><br />
+                        <span class="identacao">Contagem: 3 5 7 9 Acabou!</span><br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
+                        let <span class="nome-variavel">valorInicial</span> = Number(prompt('Insira o valor inicial: '))<br />
+                        let <span class="nome-variavel">valorFinal</span> = Number(prompt('Insira o valor final: '))<br />
+                        let <span class="nome-variavel">incremento</span> = Number(prompt('Insira o valor incremento: '))<br />
+                        let <span class="nome-variavel">sequencia</span> = ''<br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="nome-variavel">valorInicial</span>; <span class="nome-variavel">i</span> <= <span class="nome-variavel">valorFinal</span>;) {<br />
+                            <span class="identacao"><span class="nome-variavel">sequencia</span> += `${<span class="nome-variavel">i</span>} `</span><br />
+                            <span class="identacao"><span class="nome-variavel">i</span> += <span class="nome-variavel">incremento</span></span><br />
+                        }<br />
+                        <span class="nome-variavel">sequencia</span> += 'Acabou!'<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">sequencia</span><br />
+                        
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>
+                        Numa promoção exclusiva para o Dia da Mulher, uma loja quer dar
+                        descontos para todos, mas especialmente para mulheres. Faça um
+                        programa que leia nome, sexo e o valor das compras do cliente e
+                        calcule o preço com desconto. Sabendo que:<br />
+                        <span class="identacao">a. Homens ganham 5% de desconto</span><br />
+                        <span class="identacao">b. Mulheres ganham 13% de desconto</span><br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio4')<br />
+                        let <span class="nome-variavel">nome</span> = prompt('Qual seu nome (EX: João): ')<br />
+                        let <span class="nome-variavel">sexo</span> = prompt('Qual seu sexo (M -> Masculino/F -> Feminino): ')<br />
+                        let <span class="nome-variavel">valorCompras</span> = Number(prompt('Qual valor das compras (EX: 1500): '))<br />
+                        const <span class="nome-variavel">descontoHomem</span> = <span class="valor-variavel">0.05</span><br />
+                        const <span class="nome-variavel">descontoMulher</span> = <span class="valor-variavel">0.13</span><br />
+                        <br />
+                        if (!isNaN(<span class="nome-variavel">valorCompras</span>) && <span class="nome-variavel">valorCompras</span> > <span class="valor-variavel">0</span>) {<br />
+                            <span class="identacao">if (<span class="nome-variavel">sexo</span>.toUpperCase() === "M") {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">valorCompras</span> = <span class="nome-variavel">valorCompras</span> * (1-<span class="nome-variavel">descontoHomem</span>)</span><br />
+                            <span class="identacao">} else if (<span class="nome-variavel">sexo</span>.toUpperCase() === "F") {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">valorCompras</span> = <span class="nome-variavel">valorCompras</span> * (1-<span class="nome-variavel">descontoMulher</span>)</span><br />
+                            <span class="identacao">} else {</span><br />
+                                <span class="identacaoMaior">alert('Sexo inválido!')</span><br />
+                            <span class="identacao">}</span><br />
+                        } else {<br />
+                            <span class="identacaoMaior">alert('Valor incorreto! Confira o valor das suas compras.')</span><br />
+                        <span class="identacao">}</span><br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `${<span class="nome-variavel">nome</span>}, o valor final da sua compra com desconto ficou R$ ${<span class="nome-variavel">valorCompras</span>}`<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 5.</h3>
+                    <p>
+                        Faça um algoritmo que pergunte a distância que um passageiro
+                        deseja percorrer em Km. Calcule o preço da passagem, cobrando
+                        R$0.50 por Km para viagens até 200Km e R$0.45 para viagens mais
+                        longas.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio5')<br />
+                        let <span class="nome-variavel">distancia</span> = Number(prompt('Insira a distância que deseja percorrer: '))<br />
+                        const <span class="nome-variavel">viagemCurta</span> = <span class="valor-variavel">0.5</span><br />
+                        const <span class="nome-variavel">viagemLonga</span> = <span class="valor-variavel">0.45</span><br />
+                        let <span class="nome-variavel">valorPassagem</span> = <span class="valor-variavel">0</span><br />
+                        <br />
+                        if (<span class="nome-variavel">distancia</span> <= <span class="valor-variavel">200</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">valorPassagem</span> = <span class="nome-variavel">distancia</span> * <span class="nome-variavel">viagemCurta</span></span><br />
+                        } else {<br />
+                            <span class="identacao"><span class="nome-variavel">valorPassagem</span> = <span class="nome-variavel">distancia</span> * <span class="nome-variavel">viagemLonga</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `O valor da passagem é R$ ${<span class="nome-variavel">valorPassagem</span>}`<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio5()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio5"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 6.</h3>
+                    <p>
+                        Faça um programa que leia a largura e o comprimento de um
+                        terreno retangular, calculando e mostrando a sua área em m2. O
+                        programa também deve mostrar a classificação desse terreno, de
+                        acordo com a lista abaixo:<br />
+                        <span class="identacao">Abaixo de 100m2 = TERRENO POPULAR</span><br />
+                        <span class="identacao">Entre 100m2 e 500m2 = TERRENO MASTER</span><br />
+                        <span class="identacao">Acima de 500m2 = TERRENO VIP</span><br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio6')<br />
+                        let <span class="nome-variavel">largura</span> = Number(prompt('Insira a largura do terreno: '))<br />
+                        let <span class="nome-variavel">comprimento</span> = Number(prompt('Insira o comprimento do terreno: '))<br />
+                        let <span class="nome-variavel">area</span> = <span class="nome-variavel">largura</span> * <span class="nome-variavel">comprimento</span><br />
+                        let <span class="nome-variavel">classificacao</span><br />
+                        <br />
+                        if (<span class="nome-variavel">area</span> < <span class="valor-variavel">100</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">classificacao</span> = 'Terreno Popular'</span><br />
+                        } else if (<span class="nome-variavel">area</span> > <span class="valor-variavel">100</span> && <span class="nome-variavel">area</span> < <span class="valor-variavel">500</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">classificacao</span> = 'Terreno Master'</span><br />
+                        } else {<br />
+                            <span class="identacao"><span class="nome-variavel">classificacao</span> = 'Terreno VIP'</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `O terreno possui uma área de ${<span class="nome-variavel">area</span>}m2 e é classificado como ${<span class="nome-variavel">classificacao</span>}`<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio6()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio6"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>         
+
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio Ilhas Growdev.</h3>
+                    <p> 
+                        <strong>Contexualização:</strong><br />
+                        As Ilhas Growdev formam um reino independente nos mares do Pacífico.
+                        Como é um reino recente, a sociedade é muito influenciada pela
+                        informática. A moeda oficial é a GrowCoin; existem notas de GC$ 50,00,
+                        GC$ 10,00, GC$ 5,00 e GC$ 1,00. Vocês foram contratados para ajudar na
+                        programação dos caixas automáticos de um grande banco das Ilhas
+                        Growdevs.<br />
+                        <br />
+                        <strong>Tarefa:</strong><br />
+                        Os caixas eletrônicos das Ilhas Growdev operam com todos os tipos de
+                        notas disponíveis, mantendo um estoque de cédulas para cada valor. Os
+                        clientes do banco utilizam os caixas eletrônicos para efetuar retiradas de
+                        um certo número inteiro de GrowCoins.
+                        Sua tarefa é escrever um algoritmo que, dado o valor de GrowCoins
+                        desejado pelo cliente, determine o número de cada uma das notas
+                        necessárias para totalizar esse valor. Por exemplo, se o Marcelo deseja
+                        retirar GC$ 50,00 basta entregar uma única nota de cinquenta GrowCoins.
+                        Se o Édson deseja retirar GC$ 72,00 será necessário entregar uma nota de
+                        GC$ 50,00, duas de GC$ 10,00 e duas de GC$ 1,00.<br />
+                        <br />
+                        Exemplo de entrada:<br / >
+                        72<br />
+                        <br />
+                        Exemplo de saída:<br />
+                        GC$ 50,00 -> 1<br />                   
+                        GC$ 10,00 -> 2<br /> 
+                        GC$ 5,00 -> 0<br /> 
+                        GC$ 1,00 -> 2<br />                     
+                        <br /> 
+                    </p>
+                </div>
+                <div class="box-code blue">
+                        <p>
+                            const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                            let <span class="nome-variavel">saque</span> = Number(prompt('Qual o valor deseja sacar? '))<br />
+                            let <span class="nome-variavel">restante</span> = <span class="valor-variavel">0</span><br />
+                            <br />
+                            if (!isNaN(<span class="nome-variavel">saque</span>) && <span class="nome-variavel">saque</span> > <span class="valor-variavel">0</span> && Number.isInteger(<span class="nome-variavel">saque</span>)) {<br />
+                                <span class="identacao">let <span class="nome-variavel">nota50</span> = parseInt(<span class="nome-variavel">saque</span> / <span class="valor-variavel">50</span>)</span><br />
+                                <span class="identacao"><span class="nome-variavel">restante</span> = <span class="nome-variavel">saque</span> % <span class="valor-variavel">50</span></span><br />
+                                <br />
+                                <span class="identacao">let <span class="nome-variavel">nota10</span> = parseInt(<span class="nome-variavel">restante</span> / <span class="valor-variavel">10</span>)</span><br />
+                                <span class="identacao"><span class="nome-variavel">restante</span> = <span class="nome-variavel">restante</span> % <span class="valor-variavel">10</span></span><br />
+                                <br />
+                                <span class="identacao">let <span class="nome-variavel">nota5</span> = parseInt(<span class="nome-variavel">restante</span> / <span class="valor-variavel">5</span>)</span><br />
+                                <span class="identacao"><span class="nome-variavel">restante</span> = <span class="nome-variavel">restante</span> % <span class="valor-variavel">5</span></span><br />
+                                <br />
+                                <span class="identacao">let <span class="nome-variavel">nota1</span> = parseInt(<span class="nome-variavel">restante</span>)</span><br />
+                                <br />
+                                <span class="identacao"></span><span class="nome-variavel">resultado</span>.innerHTML = `Nota GC$ 50,00 -> ${<span class="nome-variavel">nota50</span>}` +
+                                    `Nota GC$ 10,00 -> ${<span class="nome-variavel">nota10</span>}` + `Nota GC$ 5,00 -> ${<span class="nome-variavel">nota5</span>}` + `Nota GC$ 1,00 -> ${<span class="nome-variavel">nota1</span>}`<br />
+                            </span>} else {<br />
+                                <span class="identacao">alert('Valor inválido! Você deve sacar um valor inteiro maior que 0');</span><br />
+                            }</span>
+                
+                          
+                        </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+           
+            </div>
+            
+
+        </section>
+    </main>
+
+</body>
+
+</html>

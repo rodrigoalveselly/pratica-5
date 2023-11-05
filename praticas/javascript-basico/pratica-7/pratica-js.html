@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>Criar um array e percorrê-lo utilizando o loop for<br />
+                        <br />
+                        a. Crie um array com o nome "nomes" e adicione 4 nomes de
+                        pessoas que você conhece<br />
+                        b. Utilize o loop for para percorrer o array e exibir os nomes na
+                        tela</p>
+                </div>
+                <div class="box-code blue">
+                        <p>
+                            const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                            let <span class="nome-variavel">nomes</span> = [<span class="valor-variavel">'Lucas'</span>, <span class="valor-variavel">'Leovaldo'</span>, <span class="valor-variavel">'Leonardo'</span>, <span class="valor-variavel">'Leomir'</span>]<br />
+                            let <span class="nome-variavel">exibidor</span> = <span class="valor-variavel">""</span><br />
+                            <br />
+                            for (<span class="nome-variavel">nome</span> of <span class="nome-variavel">nomes</span>) {<br />
+                                <span class="identacao"><span class="nome-variavel">exibidor</span> += `${<span class="nome-variavel">nome</span>}`<br /></span>
+                                <span class="identacao comentario">// console.log(<span class="nome-variavel comentario">nome</span>)</span><br />
+                            }<br />
+                            <br />
+                            <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">exibidor</span>
+                        </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>Criar um array e percorrê-lo utilizando o loop for of<br />
+                        <br />
+                        a. Crie um array com o nome "numeros" e adicione 5 números de
+                        sua escolha<br />
+                        b. Utilize o loop for of para percorrer o array e exibir a soma dos
+                        números na tela<br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
+                        let <span class="nome-variavel">numeros</span> = [<span class="valor-variavel">4</span>, <span class="valor-variavel">3</span>, <span class="valor-variavel">9</span>, <span class="valor-variavel">16</span>, <span class="valor-variavel">21</span>]<br />
+                        let <span class="nome-variavel">soma</span> = <span class="valor-variavel">0</span><br />
+                        <br />
+                        for (<span class="nome-variavel">numero</span> of <span class="nome-variavel">numeros</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">soma</span> += <span class="nome-variavel">numero</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">soma</span>
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>Utilizar os métodos push, pop, unshift e shift para manipular um
+                        array<br />
+                        <br />
+                        a. Crie um array com o nome "frutas" e adicione 3 tipos de frutas
+                        de sua escolha<br />
+                        b. Utilize o método push para adicionar uma fruta no final do
+                        array<br />
+                        b. Utilize o método pop para remover a última fruta do array<br />
+                        b. Utilize o método unshift para adicionar uma fruta no início do
+                        array<br />
+                        b. Utilize o método shift para remover a primeira fruta do array<br />
+                        b. Exiba o array resultante na tela<br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
+                        let <span class="nome-variavel">frutas</span> = []<br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="valor-variavel">0</span>; <span class="nome-variavel">i</span> <= 2; <span class="nome-variavel">i</span>++) {<br />
+                            <span class="identacao"><span class="nome-variavel">frutas</span>[<span class="nome-variavel">i</span>] = prompt(`Insira uma fruta para adicionar no array: (${<span class="nome-variavel">i</span>+1}/3)`)</span><br />
+                        }<br />
+                        <br />
+                        let <span class="nome-variavel">adicionarFinal</span> = prompt('Adicione mais uma fruta no Array na posição final')<br />
+                        <span class="nome-variavel">frutas</span>.push(<span class="nome-variavel">adicionarFinal</span>)<br />
+                        alert(`O array atual é ${<span class="nome-variavel">frutas</span>}`)<br />
+                        <br />
+                        <span class="nome-variavel">frutas</span>.pop()<br />
+                        alert('A posição final do array foi removida com .pop()')<br />
+                        alert(`O array atual é ${<span class="nome-variavel">frutas</span>}`)<br />
+                        <br />
+                        let <span class="nome-variavel">adicionarInicial</span> = prompt('Adicione mais uma fruta no Array na posição inicial')<br />
+                        <span class="nome-variavel">frutas</span>.unshift(<span class="nome-variavel">adicionarInicial</span>)<br />
+                        alert(`O array atual é ${<span class="nome-variavel">frutas</span>}`)<br />
+                        <br />
+                        <span class="nome-variavel">frutas</span>.shift()<br />
+                        alert('A posição inicial do array foi removida com .shift()')<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `O array final é ${<span class="nome-variavel">frutas</span>}`<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
