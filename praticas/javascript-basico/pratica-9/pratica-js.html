@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>
+                        Crie um objeto em JavaScript para colocar dois atributos de um
+                        produto. Atribua o preço e descrição do produto com o valor “90” e a
+                        descrição com o valor “Mouse”. Mostre no console o valor dos dois
+                        atributos.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                        <p>
+                            const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                            const <span class="nome-variavel">produto</span> = {<br />
+                                <span class="nome-variavel identacao">nome:</span> '<span class="valor-variavel">Mouse</span>',<br />
+                                <span class="nome-variavel identacao">valor:</span> <span class="valor-variavel">90</span><br />
+                            }<br />
+                            <br />
+                            <span class="nome-variavel">resultado</span>.innerHTML = `Nome: ${<span class="nome-variavel">produto</span>.<span class="nome-variavel">nome</span>}, Valor: R$ ${<span class="nome-variavel">produto</span>.<span class="nome-variavel">valor</span>}`<br />
+                        </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>
+                        Crie um objeto em JavaScript para colocar 5 atributos de um
+                        notebook. Atribua os seguintes atributos:<br />
+                        <br />
+                        <span class="identacao">Processador = i7</span><br />
+                        <span class="identacao">Memória = 16GB</span><br />
+                        <span class="identacao">Preço = 5000</span><br />
+                        <span class="identacao">HD = 1TB</span><br />
+                        <span class="identacao">SSD = 256GB</span><br />
+                        <br />
+                        Por fim, mostre o nome e valor de cada atributo no console,exatamente como está na atividade.
+                        
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
+                        let <span class="nome-variavel">descricao</span> = ''<br />
+                        const <span class="nome-variavel">notebook</span> = {<br />
+                            <span class="nome-variavel identacao">processador:</span> '<span class="valor-variavel">i7</span>',<br />
+                            <span class="nome-variavel identacao">memoria:</span> '<span class="valor-variavel">16GB</span>',<br />
+                            <span class="nome-variavel identacao">preco:</span> <span class="valor-variavel">5000</span>,<br />
+                            <span class="nome-variavel identacao">hd:</span> '<span class="valor-variavel">1TB</span>',<br />
+                            <span class="nome-variavel identacao">ssd:</span> '<span class="valor-variavel">256GB</span>'<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">for</span> (const <span class="nome-variavel">config</span> in <span class="nome-variavel">notebook</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">descricao</span> += `${<span class="nome-variavel">config</span>} = ${<span class="nome-variavel">notebook</span>[<span class="nome-variavel">config</span>]}`<br /></span>
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">descricao</span><br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>
+                        Crie um objeto para colocar nome e duas notas. Atribua nome e
+                        duas notas para o primeiro objeto, que será nosso primeiro aluno.
+                        Agora crie mais um objeto para colocar informações do nosso
+                        segundo aluno. Mostre as informações de cada aluno no console.
+                        Mostre também a média do primeiro aluno e a média do segundo
+                        aluno. Por fim mostre a média desta turma de 2 alunos.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
+                        const <span class="nome-variavel">turma</span> = []<br />
+                        let <span class="nome-variavel">boletim</span> = ''<br />
+                        let <span class="nome-variavel">mediaTurma</span> = 0<br />
+                        <br />
+                        const <span class="nome-variavel">aluno1</span> = {<br />
+                            <span class="identacao"><span class="nome-variavel">nome:</span> '<span class="valor-variavel">Rodrigo</span>',</span><br />
+                            <span class="identacao"><span class="nome-variavel">nota1:</span> <span class="valor-variavel">7.5</span>,</span><br />
+                            <span class="identacao"><span class="nome-variavel">nota2:</span> <span class="valor-variavel">8</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">turma</span>.push(<span class="nome-variavel">aluno1</span>)<br />
+                        <br />
+                        const <span class="nome-variavel">aluno2</span> = {<br />
+                            <span class="identacao"><span class="nome-variavel">nome:</span> '<span class="valor-variavel">Julio</span>',</span><br />
+                            <span class="identacao"><span class="nome-variavel">nota1:</span> <span class="valor-variavel">9</span>,</span><br />
+                            <span class="identacao"><span class="nome-variavel">nota2:</span> <span class="valor-variavel">5.5</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">turma</span>.push(<span class="nome-variavel">aluno2</span>)<br />
+                        <br />
+                        <span class="nome-variavel">for</span> (let <span class="nome-variavel">aluno</span> of <span class="nome-variavel">turma</span>) {<br />
+                            <span class="identacao">let <span class="nome-variavel">mediaAluno</span> = (<span class="nome-variavel">aluno</span>.nota1 + <span class="nome-variavel">aluno</span>.nota2) / 2</span><br />
+                            <span class="identacao"><span class="nome-variavel">mediaTurma</span> += <span class="nome-variavel">mediaAluno</span></span><br />
+                            <span class="identacao"><span class="nome-variavel">boletim</span> += `Aluno: ${<span class="nome-variavel">aluno</span>.nome}, Nota 1: ${<span class="nome-variavel">aluno</span>.nota1}, Nota 2: ${<span class="nome-variavel">aluno</span>.nota2}, Média: ${<span class="nome-variavel">mediaAluno</span>}` <br /></span>
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">mediaTurma</span> = (<span class="nome-variavel">mediaTurma</span> / 2)<br />
+                        <span class="nome-variavel">boletim</span> += `A media da turma foi de ${<span class="nome-variavel">mediaTurma</span>}`<br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">boletim</span><br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>
+                        Crie um cadastro de pessoas onde o usuário informe o nome, idade
+                        e se está trabalhando ou não, se a pessoa estiver trabalhando pergunte para ele o salário que está ganhando. Para cada pessoa
+                        cadastrada, pergunte ao usuário se ele deseja continuar
+                        cadastrando ou não. No final, mostre as pessoas que estão
+                        desempregadas, as pessoas que estão empregadas separadas
+                        pelas que ganham mais que 2500 e menos que 2500.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio4')<br />
+                        const <span class="nome-variavel">pessoas</span> = []<br />
+                        let <span class="nome-variavel">continuar</span> = <span class="valor-variavel">true</span><br />
+                        let <span class="nome-variavel">resposta</span> = <span class="valor-variavel">''</span><br />
+                        <br />
+                        <span class="nome-variavel">while</span> (<span class="nome-variavel">continuar</span>) {<br />
+                            <span class="identacao">const <span class="nome-variavel">nome</span> = prompt("Digite o seu nome:")</span><br />
+                            <span class="identacao">const <span class="nome-variavel">idade</span> = Number(prompt("Digite a sua idade"))</span><br />
+                            <span class="identacao">const <span class="nome-variavel">estaTrabalhando</span> = confirm('Você esta trabalhando atualmente? (OK = SIM/CANCELAR = NÃO)')</span><br />
+                            <span class="identacao">let <span class="nome-variavel">salario</span> = <span class="valor-variavel">0</span></span><br />
+                            <br />
+                            <span class="identacao">if (<span class="nome-variavel">estaTrabalhando</span>) {</span><br />
+                                <span class="identacao identacao">salario = Number(prompt("Digite o salario"))</span><br />
+                            <span class="identacao">}</span><br />
+                            <br />
+                            <span class="identacao">const <span class="nome-variavel">pessoa</span> = {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">nome,</span></span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">idade,</span></span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">estaTrabalhando,</span></span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">salario</span></span><br />
+                            <span class="identacao">}</span><br />
+                            <br />
+                            <span class="identacao"><span class="nome-variavel">pessoas</span>.push(<span class="nome-variavel">pessoa</span>)</span><br />
+                            <br />
+                            <span class="identacao"><span class="nome-variavel">continuar</span> = confirm('Quer cadastrar outra pessoa?')</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resposta</span> += 'Pessoas desempregadas:'<br />
+                        <span class="nome-variavel">for</span> (<span class="nome-variavel">pessoa</span> of <span class="nome-variavel">pessoas</span>) {<br />
+                            <span class="identacao">if (!<span class="nome-variavel">pessoa</span>.estaTrabalhando) {</span><br />
+                                <span class="identacao identacao"><span class="nome-variavel">resposta</span> += `Nome: ${<span class="nome-variavel">pessoa</span>.nome}, Idade: ${<span class="nome-variavel">pessoa</span>.idade}`<br /></span>
+                            <span class="identacao">}</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resposta</span> += 'Pessoas empregadas com salários menores que 2500:'<br />
+                        <span class="nome-variavel">for</span> (<span class="nome-variavel">pessoa</span> of <span class="nome-variavel">pessoas</span>) {<br />
+                            <span class="identacao">if (<span class="nome-variavel">pessoa</span>.salario < <span class="valor-variavel">2500</span> && <span class="nome-variavel">pessoa</span>.salario !== <span class="valor-variavel">0</span>) {</span><br />
+                                <span class="identacao identacao"><span class="nome-variavel">resposta</span> += `Nome: ${<span class="nome-variavel">pessoa</span>.nome}, Idade: ${<span class="nome-variavel">pessoa</span>.idade} `<br /></span>
+                            <span class="identacao">}</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resposta</span> += 'Pessoas empregadas com salários maiores que 2500:'<br />
+                        <span class="nome-variavel">for</span> (<span class="nome-variavel">pessoa</span> of <span class="nome-variavel">pessoas</span>) {<br />
+                            <span class="identacao">if (<span class="nome-variavel">pessoa</span>.salario >= <span class="valor-variavel">2500</span>) {</span><br />
+                                <span class="identacao identacao"><span class="nome-variavel">resposta</span> += `Nome: ${<span class="nome-variavel">pessoa</span>.nome}, Idade: ${<span class="nome-variavel">pessoa</span>.idade}`<br /></span>
+                            <span class="identacao">}</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">resposta</span><br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+</body>
+
+</html>

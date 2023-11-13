@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>
+                        Desenvolva um algoritmo para percorrer um vetor de 15 elementos
+                        inteiros já preenchido e imprima todos os valores pares.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                        <p>
+                            const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                            const <span class="nome-variavel">numeros</span> = [<span class="valor-variavel">1</span>,<span class="valor-variavel">2</span>,<span class="valor-variavel">3</span>,<span class="valor-variavel">4</span>,<span class="valor-variavel">5</span>,<span class="valor-variavel">6</span>,<span class="valor-variavel">7</span>,<span class="valor-variavel">8</span>,<span class="valor-variavel">9</span>,<span class="valor-variavel">10</span>,<span class="valor-variavel">11</span>,<span class="valor-variavel">12</span>,<span class="valor-variavel">13</span>,<span class="valor-variavel">14</span>,<span class="valor-variavel">15</span>]<br />
+                            let <span class="nome-variavel">pares</span> = <span class="valor-variavel">``</span><br />
+                            <br />
+                            for (let <span class="nome-variavel">numero</span> of <span class="nome-variavel">numeros</span>) {<br />
+                                <span class="identacao">if (<span class="nome-variavel">numero</span> % <span class="valor-variavel">2</span> === <span class="valor-variavel">0</span>) {</span><br />
+                                    <span class="identacaoMaior"><span class="nome-variavel">pares</span> += `${<span class="nome-variavel">numero</span>}, `</span><br />
+                                <span class="identacao">}</span><br />
+                            }<br />
+                            <br />
+                            <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">pares</span><br />
+                        </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>
+                        Desenvolva um algoritmo para percorrer um vetor de 20 elementos
+                        inteiros e no final mostre a soma de todos os elementos.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
+                        const <span class="nome-variavel">numeros</span> = [<span class="valor-variavel">1</span>,<span class="valor-variavel">2</span>,<span class="valor-variavel">3</span>,<span class="valor-variavel">4</span>,<span class="valor-variavel">5</span>,<span class="valor-variavel">6</span>,<span class="valor-variavel">7</span>,<span class="valor-variavel">8</span>,<span class="valor-variavel">9</span>,<span class="valor-variavel">10</span>,<span class="valor-variavel">11</span>,<span class="valor-variavel">12</span>,<span class="valor-variavel">13</span>,<span class="valor-variavel">14</span>,<span class="valor-variavel">15</span>,<span class="valor-variavel">16</span>,<span class="valor-variavel">17</span>,<span class="valor-variavel">18</span>,<span class="valor-variavel">19</span>,<span class="valor-variavel">20</span>]<br />
+                        let <span class="nome-variavel">soma</span> = <span class="valor-variavel">0</span><br />
+                        <br />
+                        for (let <span class="nome-variavel">numero</span> of <span class="nome-variavel">numeros</span>) {<br />
+                            <span class="identacao"><span class="nome-variavel">soma</span> += <span class="nome-variavel">numero</span></span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">soma</span><br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>
+                        Desenvolva um algoritmo que preenche um vetor com os 4
+                        primeiros números perfeitos.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
+                        let <span class="nome-variavel">numerosPerfeitos</span> = []<br />
+                        <br />
+                        for (let <span class="nome-variavel">i</span> = <span class="valor-variavel">1</span>; <span class="nome-variavel">numerosPerfeitos.length</span> < <span class="valor-variavel">4</span>; <span class="nome-variavel">i</span>++) {<br />
+                            <span class="identacao">let <span class="nome-variavel">soma</span> = <span class="valor-variavel">0</span></span><br />
+                            <span class="identacao">for (let <span class="nome-variavel">j</span> = <span class="valor-variavel">1</span>; <span class="nome-variavel">j</span> <= <span class="nome-variavel">i</span>; <span class="nome-variavel">j</span>++) {</span><br />
+                                <span class="identacaoMaior">if (<span class="nome-variavel">i</span> % <span class="nome-variavel">j</span> === <span class="valor-variavel">0</span> && <span class="nome-variavel">i</span> !== <span class="nome-variavel">j</span>) {</span><br />
+                                    <span class="identacaoMaxima"><span class="nome-variavel">soma</span> += <span class="nome-variavel">j</span></span><br />
+                                <span class="identacaoMaior">}</span><br />
+                            <span class="identacao">}</span><br />
+                            <br />
+                            <span class="identacao">if (<span class="nome-variavel">soma</span> === <span class="nome-variavel">i</span>) {</span><br />
+                                <span class="identacaoMaior"><span class="nome-variavel">numerosPerfeitos</span>.push(<span class="nome-variavel">i</span>)</span><br />
+                            <span class="identacao">}</span><br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">numerosPerfeitos</span><br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>
+                        Desenvolva um algoritmo que declare uma lista de 10 números e
+                        solicite um número para o usuário e no final informe se o número
+                        que o usuário digitou está dentro da lista ou não.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio4')<br />
+                        const <span class="nome-variavel">numeros</span> = [<span class="valor-variavel">1</span>,<span class="valor-variavel">2</span>,<span class="valor-variavel">3</span>,<span class="valor-variavel">4</span>,<span class="valor-variavel">5</span>,<span class="valor-variavel">11</span>,<span class="valor-variavel">12</span>,<span class="valor-variavel">14</span>,<span class="valor-variavel">15</span>,<span class="valor-variavel">19</span>,<span class="valor-variavel">20</span>]<br />
+                        let <span class="nome-variavel">chute</span> = Number(prompt('Insira um numero:'))<br />
+                        let <span class="nome-variavel">resposta</span> = <span class="valor-variavel">false</span><br />
+                        <br />
+                        for (<span class="nome-variavel">numero</span> of <span class="nome-variavel">numeros</span>) {<br />
+                            <span class="identacao">if</span> (<span class="nome-variavel">numero</span> === <span class="nome-variavel">chute</span>) {<br />
+                                <span class="nome-variavel identacaoMaior">resposta</span> = true<br />
+                            <span class="identacao"></span>
+                            }<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resposta</span> ? <span class="nome-variavel">resultado</span>.innerHTML = `O seu chute ${<span class="nome-variavel">chute</span>} esta na lista` : <span class="nome-variavel">resultado</span>.innerHTML = `O seu chute ${<span class="nome-variavel">chute</span>} não esta na lista`<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 5.</h3>
+                    <p>
+                        Escreva um algoritmo que solicite ao usuário a entrada de 5 nomes,
+                        e que exiba a lista desses nomes na tela. Após exibir essa lista, o
+                        programa deve mostrar também os nomes na ordem inversa em
+                        que o usuário os digitou.<br />
+                        <br />
+                        Ex:<br />
+                        Entrada: Édson, Marcelo, Letícia, Ju, Thobias<br />
+                        Saída: Thobias, Ju, Letícia, Marcelo, Édson<br />
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio5')<br />
+                        let <span class="nome-variavel">nomes</span> = []<br />
+                        <span class="valor-variavel">while</span> (<span class="nome-variavel">nomes</span>.length < <span class="valor-variavel">5</span>) {<br />
+                            <span class="nome-variavel identacao">nomes</span>.push(<span class="valor-variavel">prompt</span>('Digite o nome:'))<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">nomes</span>.<span class="valor-variavel">reverse</span>()<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio5()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio5"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
