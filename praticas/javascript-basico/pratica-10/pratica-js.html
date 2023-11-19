@@ -17,21 +17,24 @@
                 <div class="exercicio">
                     <h3>Exercicio 1.</h3>
                     <p>
-                        Crie um objeto em JavaScript para colocar dois atributos de um
-                        produto. Atribua o preço e descrição do produto com o valor “90” e a
-                        descrição com o valor “Mouse”. Mostre no console o valor dos dois
-                        atributos.
+                        Considere o seguinte array:<br />
+                        <span style="font-style: italic; background-color: #282a36ab; color: #f3f3f3;"> const salarios = [5000.00, 5460.50, 3452.00, 6900.00, 7590.10, 8012.99,
+                        1290.00, 15000.00]</span><br />
+                        <br />
+                        a. Imprima no console o índice do primeiro salário maior que 7.500 utilizando o <strong>findIndex </strong> <br />
+                        <br />
+                        b. Crie uma nova lista filtrada com os salários que são maior que 8.000 utilizando o <strong>filter</strong> <br />
                     </p>
                 </div>
                 <div class="box-code blue">
                         <p>
                             const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
-                            const <span class="nome-variavel">produto</span> = {<br />
-                                <span class="nome-variavel identacao">nome:</span> '<span class="valor-variavel">Mouse</span>',<br />
-                                <span class="nome-variavel identacao">valor:</span> <span class="valor-variavel">90</span><br />
-                            }<br />
+                            const <span class="nome-variavel">salarios</span> = [<span class="valor-variavel">5000.00, 5460.50, 3452.00, 6900.00, 7590.10, 8012.99, 1290.00, 15000.00</span>]<br />
                             <br />
-                            <span class="nome-variavel">resultado</span>.innerHTML = `Nome: ${<span class="nome-variavel">produto</span>.<span class="nome-variavel">nome</span>}, Valor: R$ ${<span class="nome-variavel">produto</span>.<span class="nome-variavel">valor</span>}`<br />
+                            const <span class="nome-variavel">primeiroGrandeSalario</span> = <span class="nome-variavel">salarios</span>.findIndex(<span class="nome-variavel">salario</span> => <span class="nome-variavel">salario</span> > <span class="valor-variavel">7500</span>)<br />
+                            const <span class="nome-variavel">maioresSalarios</span> = <span class="nome-variavel">salarios</span>.filter(<span class="nome-variavel">salario</span> => <span class="nome-variavel">salario</span> > <span class="valor-variavel">8000</span>)<br />
+                            <br />
+                            <span class="nome-variavel">resultado</span>.innerHTML = `a: ${<span class="nome-variavel">primeiroGrandeSalario</span>} &lt;br /&gt; b: ${<span class="nome-variavel">maioresSalarios</span>}`<br />
                         </p>
 
                 </div>
@@ -45,36 +48,32 @@
                 <div class="exercicio">
                     <h3>Exercicio 2.</h3>
                     <p>
-                        Crie um objeto em JavaScript para colocar 5 atributos de um
-                        notebook. Atribua os seguintes atributos:<br />
+                        James estava criando uma array com as cores do arco-íris, e ele
+                        esqueceu algumas cores. As cores padrão de um arco-íris são
+                        normalmente listadas nesta ordem: <br />
                         <br />
-                        <span class="identacao">Processador = i7</span><br />
-                        <span class="identacao">Memória = 16GB</span><br />
-                        <span class="identacao">Preço = 5000</span><br />
-                        <span class="identacao">HD = 1TB</span><br />
-                        <span class="identacao">SSD = 256GB</span><br />
+                        <span style="font-style: italic; background-color: #282a36ab; color: #f3f3f3;">const rainbow = ["Vermelho", "Laranja", "Amarelo", "Verde", "Azul","Roxo"];</span>
+                        <br /><br />
+                        mas James tinha isto:
                         <br />
-                        Por fim, mostre o nome e valor de cada atributo no console,exatamente como está na atividade.
-                        
+                        <span style="font-style: italic; background-color: #282a36ab; color: #f3f3f3;">const rainbow = ["Vermelho", "Laranja", "Preto", "Azul"];</span><br />
+                        <br />
+                        Usando somente o método <strong>splice</strong> insira as cores que faltam na array e remova a cor "Preto", seguindo estes passos:<br />
+                        <br />
+                        <span class="identacao">a. Remova "Preto"</span><Br />
+                        <span class="identacao">b. Adicione "Amarelo" e "Verde"</span><br />
+                        <span class="identacao">c. Adicione "Roxo"</span><br />
                     </p>
                 </div>
                 <div class="box-code blue">
                     <p>
                         const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
-                        let <span class="nome-variavel">descricao</span> = ''<br />
-                        const <span class="nome-variavel">notebook</span> = {<br />
-                            <span class="nome-variavel identacao">processador:</span> '<span class="valor-variavel">i7</span>',<br />
-                            <span class="nome-variavel identacao">memoria:</span> '<span class="valor-variavel">16GB</span>',<br />
-                            <span class="nome-variavel identacao">preco:</span> <span class="valor-variavel">5000</span>,<br />
-                            <span class="nome-variavel identacao">hd:</span> '<span class="valor-variavel">1TB</span>',<br />
-                            <span class="nome-variavel identacao">ssd:</span> '<span class="valor-variavel">256GB</span>'<br />
-                        }<br />
+                        const <span class="nome-variavel">rainbow</span> = [<span class="valor-variavel">'Vermelho', 'Laranja', 'Preto', 'Azul'</span>]<br />
                         <br />
-                        <span class="nome-variavel">for</span> (const <span class="nome-variavel">config</span> in <span class="nome-variavel">notebook</span>) {<br />
-                            <span class="identacao"><span class="nome-variavel">descricao</span> += `${<span class="nome-variavel">config</span>} = ${<span class="nome-variavel">notebook</span>[<span class="nome-variavel">config</span>]}`<br /></span>
-                        }<br />
+                        <span class="nome-variavel">rainbow</span>.splice(<span class="valor-variavel">2, 1, 'Amarelo', 'Verde'</span>)<br />
+                        <span class="nome-variavel">rainbow</span>.splice(<span class="nome-variavel">rainbow</span>.length, <span class="valor-variavel">0, 'Roxo'</span>)<br />
                         <br />
-                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">descricao</span><br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">rainbow</span><br />
                     </p>
 
                 </div>
@@ -87,57 +86,6 @@
             <div class="box-content">
                 <div class="exercicio">
                     <h3>Exercicio 3.</h3>
-                    <p>
-                        Crie um objeto para colocar nome e duas notas. Atribua nome e
-                        duas notas para o primeiro objeto, que será nosso primeiro aluno.
-                        Agora crie mais um objeto para colocar informações do nosso
-                        segundo aluno. Mostre as informações de cada aluno no console.
-                        Mostre também a média do primeiro aluno e a média do segundo
-                        aluno. Por fim mostre a média desta turma de 2 alunos.
-                    </p>
-                </div>
-                <div class="box-code blue">
-                    <p>
-                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
-                        const <span class="nome-variavel">turma</span> = []<br />
-                        let <span class="nome-variavel">boletim</span> = ''<br />
-                        let <span class="nome-variavel">mediaTurma</span> = 0<br />
-                        <br />
-                        const <span class="nome-variavel">aluno1</span> = {<br />
-                            <span class="identacao"><span class="nome-variavel">nome:</span> '<span class="valor-variavel">Rodrigo</span>',</span><br />
-                            <span class="identacao"><span class="nome-variavel">nota1:</span> <span class="valor-variavel">7.5</span>,</span><br />
-                            <span class="identacao"><span class="nome-variavel">nota2:</span> <span class="valor-variavel">8</span></span><br />
-                        }<br />
-                        <br />
-                        <span class="nome-variavel">turma</span>.push(<span class="nome-variavel">aluno1</span>)<br />
-                        <br />
-                        const <span class="nome-variavel">aluno2</span> = {<br />
-                            <span class="identacao"><span class="nome-variavel">nome:</span> '<span class="valor-variavel">Julio</span>',</span><br />
-                            <span class="identacao"><span class="nome-variavel">nota1:</span> <span class="valor-variavel">9</span>,</span><br />
-                            <span class="identacao"><span class="nome-variavel">nota2:</span> <span class="valor-variavel">5.5</span></span><br />
-                        }<br />
-                        <br />
-                        <span class="nome-variavel">turma</span>.push(<span class="nome-variavel">aluno2</span>)<br />
-                        <br />
-                        <span class="nome-variavel">for</span> (let <span class="nome-variavel">aluno</span> of <span class="nome-variavel">turma</span>) {<br />
-                            <span class="identacao">let <span class="nome-variavel">mediaAluno</span> = (<span class="nome-variavel">aluno</span>.nota1 + <span class="nome-variavel">aluno</span>.nota2) / 2</span><br />
-                            <span class="identacao"><span class="nome-variavel">mediaTurma</span> += <span class="nome-variavel">mediaAluno</span></span><br />
-                            <span class="identacao"><span class="nome-variavel">boletim</span> += `Aluno: ${<span class="nome-variavel">aluno</span>.nome}, Nota 1: ${<span class="nome-variavel">aluno</span>.nota1}, Nota 2: ${<span class="nome-variavel">aluno</span>.nota2}, Média: ${<span class="nome-variavel">mediaAluno</span>}` <br /></span>
-                        }<br />
-                        <br />
-                        <span class="nome-variavel">mediaTurma</span> = (<span class="nome-variavel">mediaTurma</span> / 2)<br />
-                        <span class="nome-variavel">boletim</span> += `A media da turma foi de ${<span class="nome-variavel">mediaTurma</span>}`<br />
-                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">boletim</span><br />
-                    </p>
-                </div>
-                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
-                <div class="box-resultado green">
-                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
-                </div>
-            </div>
-            <div class="box-content">
-                <div class="exercicio">
-                    <h3>Exercicio 4.</h3>
                     <p>
                         Crie um cadastro de pessoas onde o usuário informe o nome, idade
                         e se está trabalhando ou não, se a pessoa estiver trabalhando pergunte para ele o salário que está ganhando. Para cada pessoa
@@ -200,9 +148,9 @@
                         <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">resposta</span><br />
                     </p>
                 </div>
-                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
                 <div class="box-resultado green">
-                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
                 </div>
             </div>
             

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>
+                        Crie uma função que recebe 3 notas de um aluno por parâmetro e
+                        uma letra. Se a letra for A a função deve calcular a média aritmética,
+                        se for P, a média ponderada (peso: 5, 3 e 2).
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                        const <span class="nome-variavel">mediaAluno</span> = (<span class="nome-variavel">notas</span>, <span class="nome-variavel">metodo</span>) => {<br />
+                            <span class="identacao"></span>let <span class="nome-variavel">somaNota</span> = <span class="valor-variavel">0</span><br />
+                            <span class="identacao"></span>let <span class="nome-variavel">somaPeso</span> = <span class="valor-variavel">0</span><br />
+                            <span class="identacao"></span>const <span class="nome-variavel">peso</span> = [<span class="valor-variavel">5, 3, 2</span>]<br />
+                            <br />
+                            <span class="identacao"></span>if (<span class="nome-variavel">metodo</span> === "<span class="valor-variavel">A</span>") {<br />
+                                <span class="identacao"></span><span class="identacao"></span>for (let <span class="nome-variavel">nota</span> of <span class="nome-variavel">notas</span>) {<br />
+                                    <span class="identacao"></span><span class="identacao"></span><span class="identacao"></span><span class="nome-variavel">somaNota</span> += <span class="nome-variavel">nota</span><br />
+                                <span class="identacao"></span><span class="identacao"></span>}<br />
+                                <br />
+                                <span class="identacao"></span><span class="identacao"></span>let <span class="nome-variavel">media</span> = <span class="nome-variavel">somaNota</span> / <span class="nome-variavel">notas</span>.length<br />
+                                <span class="identacao"></span><span class="identacao"></span>return <span class="nome-variavel">media</span><br />
+                            <span class="identacao"></span>} else if (<span class="nome-variavel">metodo</span> === "<span class="valor-variavel">P</span>") {<br />
+                                <span class="identacao"></span><span class="identacao"></span>for (let i = <span class="valor-variavel">0</span>; i &lt; <span class="nome-variavel">notas</span>.length; i++) {<br />
+                                    <span class="identacao"></span><span class="identacao"></span><span class="identacao"></span><span class="nome-variavel">somaNota</span> += <span class="nome-variavel">notas</span>[<span class="nome-variavel">i</span>] * <span class="nome-variavel">peso</span>[<span class="nome-variavel">i</span>]<br />
+                                    <span class="identacao"></span><span class="identacao"></span><span class="identacao"></span><span class="nome-variavel">somaPeso</span> += <span class="nome-variavel">peso</span>[<span class="nome-variavel">i</span>]<br />
+                                <span class="identacao"></span><span class="identacao"></span>}<br />
+                                <br />
+                                <span class="identacao"></span><span class="identacao"></span>let <span class="nome-variavel">media</span> = <span class="nome-variavel">somaNota</span> / <span class="nome-variavel">somaPeso</span><br />
+                                <span class="identacao"></span><span class="identacao"></span>return <span class="nome-variavel">media</span><br />
+                            <span class="identacao"></span>}<br />
+                        }<br />
+                        <br />
+                        const <span class="nome-variavel">notas</span> = [<span class="valor-variavel">9, 4, 5</span>]<br />
+                        const <span class="nome-variavel">metodo</span> = '<span class="valor-variavel">P</span>'<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">mediaAluno</span>(<span class="nome-variavel">notas</span>, <span class="nome-variavel">metodo</span>)<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>
+                        Crie uma função que recebe um valor inteiro e retorne verdadeiro se
+                        for ímpar ou falso se for par.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio2')<br />
+                        const <span class="nome-variavel">teste</span> = Number(prompt('Insira um numero'))<br />
+                        const <span class="nome-variavel">verificaNumero</span> = (<span class="nome-variavel">numero</span>) => {<br />
+                            <span class="identacao"></span>if (<span class="nome-variavel">numero</span> % <span class="valor-variavel">2</span> === <span class="valor-variavel">0</span>) {<br />
+                                <span class="identacao"></span><span class="identacao"></span>return <span class="valor-variavel">false</span><br />
+                            <span class="identacao"></span>} else {<br />
+                                <span class="identacao"></span><span class="identacao"></span>return <span class="valor-variavel">true</span><br />
+                            <span class="identacao"></span>}<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">verificaNumero</span>(<span class="nome-variavel">teste</span>)<br />
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>
+                        Crie uma função que recebe por parâmetro um valor inteiro e
+                        positivo e retorne verdadeiro se o número for primo ou falso se não
+                        for.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio3')<br />
+                        const <span class="nome-variavel">teste</span> = Number(prompt('Insira um numero'))<br />
+                        const <span class="nome-variavel">verificaPrimo</span> = (<span class="nome-variavel">numero</span>) => {<br />
+                            <span class="identacao"></span>let <span class="nome-variavel">primo</span> = <span class="valor-variavel">false</span><br />
+                            <span class="identacao"></span>if (<span class="nome-variavel">numero</span> === <span class="valor-variavel">2</span> || <span class="nome-variavel">numero</span> === <span class="valor-variavel">1</span>) return <span class="valor-variavel">true</span><br />
+                            <br />
+                            <span class="identacao"></span>for (let <span class="nome-variavel">i</span> = <span class="valor-variavel">2</span>; <span class="nome-variavel">i</span> &lt; <span class="nome-variavel">numero</span>; <span class="nome-variavel">i</span>++) {<br />
+                                <span class="identacaoMaior">if (<span class="nome-variavel">numero</span> % <span class="nome-variavel">i</span> === <span class="valor-variavel">0</span>) {</span><br />
+                                    <span class="identacaoMaxima"><span class="nome-variavel">primo</span> = <span class="valor-variavel">false</span></span><br />
+                                    <span class="identacaoMaxima">break</span><br />
+                                <span class="identacao"></span><span class="identacao"></span>} else {<br />
+                                    <span class="identacaoMaxima"><span class="nome-variavel">primo</span> = <span class="valor-variavel">true</span></span><br />
+                                <span class="identacao"></span><span class="identacao"></span>}<br />
+                            <span class="identacao"></span>}<br />
+                            <br />
+                            <span class="identacao"></span>return <span class="nome-variavel">primo</span><br />
+                        }<br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">verificaPrimo</span>(<span class="nome-variavel">teste</span>)<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>
+                        Crie uma função que recebe por parâmetro o tempo de duração de
+                        uma fábrica expressa em segundos e retorna esse tempo em horas,
+                        minutos e segundos.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio4')<br />
+                        const <span class="nome-variavel">transformaTempo</span> = (<span class="nome-variavel">segundos</span>) => {<br />
+                            <span class="identacao"></span>let <span class="nome-variavel">hora</span> = Math.floor(<span class="nome-variavel">segundos</span> / <span class="valor-variavel">3600</span>)<br />
+                            <span class="identacao"></span><span class="nome-variavel">segundos</span> %= <span class="valor-variavel">3600</span><br />
+                            <span class="identacao"></span>let <span class="nome-variavel">minuto</span> = Math.floor(<span class="nome-variavel">segundos</span> / <span class="valor-variavel">60</span>)<br />
+                            <span class="identacao"></span><span class="nome-variavel">segundos</span> %= <span class="valor-variavel">60</span><br />
+                            <br />
+                            <span class="identacao"></span>return `<span class="valor-variavel">${hora}</span>:<span class="valor-variavel">${minuto}</span>:<span class="valor-variavel">${segundos}</span>`<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">transformaTempo</span>(<span class="valor-variavel">3672</span>)<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 5.</h3>
+                    <p>
+                        Crie uma função que recebe um valor inteiro e retorne verdadeiro se
+                        é um valor perfeito ou falso se não for. Um valor é dito perfeito
+                        quando ele é igual a soma dos seus divisores excetuando ele
+                        próprio.<br />
+                        <br />
+                        Ex: 6 é perfeito, pois 6 = 1 + 2 + 3, que são seus divisores
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio5')<br />
+                        const <span class="nome-variavel">teste</span> = Number(prompt('Insira um numero'))<br />
+                        const <span class="nome-variavel">verificaPerfeito</span> = (numero) => {<br />
+                            <span class="identacao"></span>let <span class="nome-variavel">soma</span> = 0 <br />
+                            <span class="identacao"></span>for (let <span class="nome-variavel">j</span> = 1; <span class="nome-variavel">j</span> &lt; <span class="nome-variavel">numero</span>; <span class="nome-variavel">j</span>++) {<br />
+                                <span class="identacao"></span><span class="identacao"></span>if (<span class="nome-variavel">numero</span> % <span class="nome-variavel">j</span> === 0) {<br />
+                                    <span class="identacao"></span><span class="identacao"></span><span class="identacao"></span><span class="nome-variavel">soma</span> += <span class="nome-variavel">j</span><br />
+                                <span class="identacao"></span><span class="identacao"></span>}<br />
+                            <span class="identacao"></span>}<br />
+                            <span class="identacao"></span>return <span class="nome-variavel">soma</span> === <span class="nome-variavel">numero</span> <br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">verificaPerfeito</span>(<span class="nome-variavel">teste</span>)<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio5()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio5"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 6.</h3>
+                    <p>
+                        Crie uma função chamada acessoAoSite() que não tenha
+                        parâmetro. Esta função será chamada ao abrir a página e mostrará
+                        um alerta informando “Bem vindo ao site”.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio6')<br />
+                        const <span class="nome-variavel">acessoAoSite</span> = () => {<br />
+                            <span class="identacao"></span>alert('Bem vindo ao site')<br />
+                            <span class="identacao"></span>return 'Alerta exibido com sucesso!'<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">acessoAoSite</span>()<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio6()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio6"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 7.</h3>
+                    <p>
+                        Crie uma função chamada mostrarMensagem() que não tenha
+                        parâmetro. Esta função será chamada ao abrir a página e mostrará
+                        uma mensagem no console.log() informando “Acesso à aplicação
+                        NomeAplicação” e um alerta informando “Bem vindo à aplicação
+                        NomeApliação”. Sendo que o nome da aplicação deve ser salvo em
+                        uma variável para mostrar nas mensagens.
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio7')<br />
+                        const <span class="nome-variavel">mostrarMensagem</span> = () => {<br />
+                            <span class="identacao"></span>const <span class="nome-variavel">nomeAplicacao</span> = 'Aplicação de Teste'<br />
+                            <span class="identacao"></span>console.log(`Acesso à aplicação ${nomeAplicacao}`)<br />
+                            <span class="identacao"></span>alert(`Bem vindo à aplicação ${nomeAplicacao}`)<br />
+                            <span class="identacao"></span>return 'Alerta e Log exibidos com sucesso!'<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">mostrarMensagem</span>()<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio7()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio7"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 8.</h3>
+                    <p>
+                        Crie uma função chamada mostrarDobro(num), que recebe um
+                        parâmetro sendo um número inteiro. Esta função será chamada ao
+                        abrir a página e mostrará um alerta com o resultado. Exemplo: “O
+                        dobro do número 5 é 10.”
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio8')<br />
+                        const <span class="nome-variavel">teste</span> = Number(prompt('Insira um numero'))<br />
+                        const <span class="nome-variavel">mostrarDobro</span> = (numero) => {<br />
+                            <span class="identacao"></span>console.log(`O dobro do número ${numero} é ${numero * 2}`)<br />
+                            <span class="identacao"></span>return `Log exibido com sucesso! <br /> O dobro do número ${numero} é ${numero * 2}`<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">mostrarDobro</span>(<span class="nome-variavel">teste</span>)<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio8()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio8"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 9.</h3>
+                    <p>
+                        Crie uma função chamada calcularMedia(nota1, nota2, nota3,
+                        nome), que recebe 4 parâmetros sendo três inteiros e um texto
+                        (String). Esta função será chamada ao abrir a página e mostrará um
+                        alerta com a média. Exemplo: “João, sua média é 70.” A função
+                        também deve mostrar no console.log() as notas recebidas. Exemplo
+                        “Nota 1: 60,Nota 2: 70,Nota 3: 80”.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio9')<br />
+                        const <span class="nome-variavel">nome</span> = prompt('Insira seu nome: ')<br />
+                        const <span class="nome-variavel">nota1</span> = Number(prompt('Insira um nota 1'))<br />
+                        const <span class="nome-variavel">nota2</span> = Number(prompt('Insira um nota 2'))<br />
+                        const <span class="nome-variavel">nota3</span> = Number(prompt('Insira um nota 3'))<br />
+                        const <span class="nome-variavel">calcularMedia</span> = (nota1, nota2, nota3, nome) => {<br />
+                            <span class="identacao"></span>let media = (nota1 + nota2 + nota3)/3<br />
+                            <span class="identacao"></span>console.log(`${nome}, sua média é ${media.toFixed(2)}`)<br />
+                            <span class="identacao"></span>return `Logo exibido com sucesso <br /> ${nome}, sua média é ${media.toFixed(2)}`<br />
+                        }<br />
+                        <br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = <span class="nome-variavel">calcularMedia</span>(<span class="nome-variavel">nota1</span>,<span class="nome-variavel">nota2</span>,<span class="nome-variavel">nota3</span>,<span class="nome-variavel">nome</span>)<br />
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio9()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio9"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+</body>
+
+</html>

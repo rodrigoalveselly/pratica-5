@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema CRUD de Veiculos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body onload="listarVeiculos(veiculos), tamanhoLista(veiculos)">
+    <main>
+        <div class="content">
+            <div class="titulo">
+                <h1>Bem-Vindo ao sistema de CRUD de veículos</h1>
+                <h2>No momento, o sistema tem <span id="numero-cars">X</span> carros cadastrados</h2>
+                <p id="text-cars">Resultado atualizado conforme parametros de pesquisas</p>
+            </div>
+            <div class="btn-area">
+                <button type="button" onclick="cadastrarVeiculos()">Cadastrar Veiculos</button>
+                <button type="button" onclick="atualizarVeiculo()">Atualizar Veiculo</button>
+                <button type="button" onclick="removerVeiculo()">Remover Veiculo</button>
+                <button type="button" onclick="aumentarPreco()">Aumentar Preços</button>
+            </div>
+            <br />
+            <div class="tabela-area">
+                <table border="1" id="tabela-carros">
+                    <tr>
+                        <th>ID</th>
+                        <th>Modelo</th>
+                        <th>Marca</th>
+                        <th>Ano</th>
+                        <th>Cor</th>
+                        <th>Preço</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="btn-area">
+                <button type="button" onclick="filtrarMarca()">Filtrar Marca</button>
+                <button type="button" onclick="filtrarPreco()">Filtrar Preço</button>
+                <button type="button" onclick="removerCarroVelho()">Filtrar Ano</button>
+                <button type="button" onclick="filtrosCruzados()">Filtro Cruzado</button>
+                <button type="button" onclick="listarVeiculos(veiculos)">Limpar Filtro</button>
+                <button type="button" onclick="pesquisar()">Pesquisar</button>
+            </div>
+            <div class="btn-area">
+                <button type="button" onclick="maiorPreco()">Maior Preço</button>
+                <button type="button" onclick="mediaPreco()">Média Preço</button>
+                <button type="button" onclick="contarCor()">Cores</button>
+                <button type="button" onclick="contarMarca()">Marcas</button>
+                
+            </div>
+            <div class="img-area">
+                <img src="./car.png" alt="Carro">
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

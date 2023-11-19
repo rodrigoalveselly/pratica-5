@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios JS - Pratica</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <main>
+        <section class="container">
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Pratica de Arrays.</h3>
+                    <p>
+                        Crie um arquivo com o script necessário para resolução do exercício
+                        considerando o seguinte array:
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">data</span> = [<br />
+                        <span class="identacao"></span>{<br />
+                        <span class="identacao identacao"></span>nome: 'Roger Medeiros',<br />
+                        <span class="identacao identacao"></span>sexo: 'M',<br />
+                        <span class="identacao identacao"></span>salario: 3250,<br />
+                        <span class="identacao"></span>},<br />
+                        <span class="identacao"></span>{<br />
+                        <span class="identacao identacao"></span>nome: 'Carolina Silva',<br />
+                        <span class="identacao identacao"></span>sexo: 'F',<br />
+                        <span class="identacao identacao"></span>salario: 1200,<br />
+                        <span class="identacao"></span>},<br />
+                        <span class="identacao"></span>{<br />
+                        <span class="identacao identacao"></span>nome: 'Cristina Avila',<br />
+                        <span class="identacao identacao"></span>sexo: 'F',<br />
+                        <span class="identacao identacao"></span>salario: 8100,<br />
+                        <span class="identacao"></span>},<br />
+                        <span class="identacao"></span>{<br />
+                        <span class="identacao identacao"></span>nome: 'Gustavo Hoffman',<br />
+                        <span class="identacao identacao"></span>sexo: 'M',<br />
+                        <span class="identacao identacao"></span>salario: 5200.35,<br />
+                        <span class="identacao"></span>},<br />
+                        <span class="identacao"></span>{<br />
+                        <span class="identacao identacao"></span>nome: 'Eva Trindade',<br />
+                        <span class="identacao identacao"></span>sexo: 'F',<br />
+                        <span class="identacao identacao"></span>salario: 2501,<br />
+                        <span class="identacao"></span>},<br />
+                        <span class="identacao"></span>{<br />
+                        <span class="identacao identacao"></span>nome: 'Andre Mathias',<br />
+                        <span class="identacao identacao"></span>sexo: 'M',<br />
+                        <span class="identacao identacao"></span>salario: 1750,<br />
+                        <span class="identacao"></span>},<br />
+                        <span class="identacao"></span>{<br />
+                        <span class="identacao identacao"></span>nome: 'Joice Castro da Silva',<br />
+                        <span class="identacao identacao"></span>sexo: 'F',<br />
+                        <span class="identacao identacao"></span>salario: 3350.25,<br />
+                        <span class="identacao"></span>},<br />
+                        ];<br />
+                    </p>
+
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 1.</h3>
+                    <p>
+                        Imprima no console a quantidade de pessoas Total.
+                    </p>
+                </div>
+                <div class="box-code blue">
+                    <p>
+                        const <span class="nome-variavel">resultado</span> = document.getElementById('exercicio1')<br />
+                        <span class="nome-variavel">resultado</span>.innerHTML = `Total de Pessoas: ${<span class="nome-variavel">data</span>.length}`
+                    </p>
+
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio1()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio1"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 2.</h3>
+                    <p>
+                        Imprima no console a quantidade de pessoas pessoas do sexo
+                        Feminino.
+                    </p>
+                </div>
+
+                <button class="btn green efeito-btn" type="button" onclick="exercicio2()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio2"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 3.</h3>
+                    <p>
+                        Imprima no console a soma do salário de todas as pessoas.
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio3()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio3"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 4.</h3>
+                    <p>
+                        Imprima no console a média do salário de todas as pessoas.
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio4()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio4"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 5.</h3>
+                    <p>
+                        Imprima no console a soma do salário de todos as pessoas do sexo Masculino
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio5()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio5"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 6.</h3>
+                    <p>
+                        Imprima no console a média do salário de todas as pessoas do sexo Masculino
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio6()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio6"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 7.</h3>
+                    <p>
+                        Utilize a função Some, para descobrir se existe algum salário
+                        superior a R$ 7.000, imprima verdadeiro no console caso exista, caso
+                        contrário falso.
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio7()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio7"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 8.</h3>
+                    <p>
+                        Utilize a função findIndex, para descobrir a posição da pessoa de nome 'Eva Trindade'.
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio8()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio8"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 9.</h3>
+                    <p>
+                        Utilize a função filter, para filtrar todas pessoas que o nome possua o sobrenome "Silva".
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio9()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio9"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="exercicio">
+                    <h3>Exercicio 10.</h3>
+                    <p>
+                        Imprima os nomes utilizando o MAP
+                    </p>
+                </div>
+                <button class="btn green efeito-btn" type="button" onclick="exercicio10()">Executar</button>
+                <div class="box-resultado green">
+                    <div id="exercicio10"><span class="comentario">Execute o código...</span></div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+</body>
+
+</html>

@@ -86,5 +86,62 @@
 
 * Exercicios JS - Estruturas de repetição - Parte 2.
 
+<br>
+
+##  📝 Pratica 14
+
+* Pratica Ilhas Growdev
+
+<br>
+
+##  📝 Pratica 15
+
+* Exercicios JS - Condicional e Repetição
+
+<br>
+
+##  📝 Pratica 16
+
+* Exercicios JS - Condicional e Repetição
+<br>
+
+##  📝 Pratica 17
+
+* Exercicios JS - Arrays
+
+<br>
+
+##  📝 Pratica 18
+
+* Exercicios JS - Arrays 2
+
+<br>
+
+##  📝 Pratica 19
+
+* Exercicios JS - Objetos e Arrays
+<br>
+
+##  📝 Pratica 20
+
+* Exercicios JS - Objetos e Arrays 2
+
+<br>
+
+##  📝 Pratica 21
+
+* Exercicios JS - Funções
+
+<br>
+
+##  📝 Pratica 22
+
+* Exercicios JS - CRUD DE CARROS
+<br>
+
+##  📝 Pratica 23
+
+* Exercicios JS - Objetos, Arrays e Funções
+
 
 
