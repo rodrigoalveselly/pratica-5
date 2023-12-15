@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Listagem de Recados</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/07daaf1f72.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <img class="logo" src="./images/logo.svg" alt="">
+    </header>
+
+    <main>
+      <div class="messages-list">
+        <div class="card login-card">
+          <h2 class="card-title">Cadastrar Usuario</h2>
+          <form id="cadastroUserForm">
+            <div class="form-control">
+                <label for="name-cadastro">Nome</label>
+                <input type="text" name="name-cadastro" id="name-cadastro" required>
+            </div>
+            <div class="form-control">
+                <label for="email-cadastro">E-mail</label>
+                <input type="email" name="email-cadastro" id="email-cadastro" required>
+            </div>
+            <div class="form-control">
+                <label for="password-cadastro">Senha</label>
+                <input type="password" name="password-input" id="password-cadastro" required>
+            </div>
+            <input type="submit" value="Enviar" id="submit-btn">
+        </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/cadastro-user.js"></script>
+</body>
+
+</html>
