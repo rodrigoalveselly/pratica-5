@@ -1,0 +1,32 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.redondo {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.laranja {
+    background-color: #f69804;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.quadrados {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.azul {
+    background-color: #10538e;
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,19 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.laranja {
+    background-color: #f69804;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.azul {
+    background-color: #10538e;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
